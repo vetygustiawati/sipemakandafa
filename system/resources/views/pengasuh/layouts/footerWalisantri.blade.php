@@ -4,5 +4,5 @@
       Wali Santri
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 @if(date("Y") > '2020') - {{date("Y")}} @endif <a href="https://sipemakan.id">Darul Fadhilah Ketapang</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2020 @if(date("Y") > '2020') - {{date("Y")}} @endif <a href="https://sipemakan.id">Vety Gustiawati</a>.</strong> All rights reserved.
   </footer>

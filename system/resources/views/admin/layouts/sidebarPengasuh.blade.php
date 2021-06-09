@@ -3,7 +3,7 @@
       if(Route::current() -> uri == $route) return 'active';
     }
  @endphp
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
+ <aside class="main-sidebar sidebar-light-primary elevation-4" style="background: white; color: black; !important">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="{{url('public')}}/dist/img/ponpes.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -49,29 +49,12 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{url('pengasuh/santri')}}" class="nav-link {{checkRouteActive('pengasuh/santri')}}">
-              <i class="nav-icon fas fa-user-graduate"></i>
-              <p>
-                Santri
-              
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{url('pengasuh/presensi')}}" class="nav-link {{checkRouteActive('pengasuh/presensi')}}">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Presensi
-                
-              </p>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a href="{{url('pengasuh/uangmakan')}}" class="nav-link {{checkRouteActive('pengasuh/uangmakan')}}">
-              <i class="nav-icon fas fa-hand-holding-usd"></i>
+              <i class="nav-icon fas fa-th"></i>
               <p>
-                Uang Makan
+                Laporan
                 
               </p>
             </a>

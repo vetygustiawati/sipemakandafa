@@ -6,8 +6,8 @@
 		<div class="col-md-12 mt-5">
 			<div class="card">
 				<div class="card-header">
-					Data User
-					<a href="{{url('admin/user/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i>Tambah Data</a>
+					<h4>Data User</h4>
+					<a href="{{url('admin/user/create')}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a>
 				</div>
 				<div class="card-body">
 					<table class="table table-datatable">

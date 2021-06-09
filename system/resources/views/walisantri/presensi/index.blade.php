@@ -3,30 +3,117 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 mt-5">
+		<div class="col-md-16 mt-5">
 			<div class="card">
 				<div class="card-header">
-					Data Presensi
+					<H4>Data Presensi</H4>
 					
 				</div>
 				<div class="card-body">
 					<table class="table table-datatable">
 							<thead>
 									<th>No</th>
-									<th>Id Santri</th>
-									<th>Tanggal</th>
-									<th>Status</th>
-									<th>Keterangan</th>
+									<th>Nama Santri</th>
+									<th>Jan</th>
+									<th>Feb</th>
+									<th>Mar</th>
+									<th>Apr</th>
+									<th>Mei</th>
+									<th>Juni</th>
+									<th>Juli</th>
+									<th>Agt</th>
+									<th>Sep</th>
+									<th>Okt</th>
+									<th>Nov</th>
+									<th>Des</th>
 							</thead>
 								<tbody>
 									@foreach($list_presensi as $presensi)
 									<tr>
 										<td>{{$loop->iteration}}</td>
 										
-										<td>{{$presensi->id_santri}}</td>
-										<td>{{$presensi->tgl_presensi}}</td>
-										<td>{{$presensi->status}}</td>
-										<td>{{$presensi->keterangan}}</td>
+										<td>{{$presensi->nama_santri}}</td>
+										<!-- jan -->
+										<td>
+											@if($presensi->jan == 'hadir')
+											<button class="btn btn-success"><i class="fa fa-check"></i></button>
+											@elseif($presensi->jan == '0')
+											<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+											@endif
+										</td>							<td><!-- feb -->
+								@if($presensi->feb == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->feb == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+									
+								@endif
+							</td>
+							<td><!-- mar -->
+								@if($presensi->mar == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->mar == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- apr -->
+								<h6>Ramadhan</h6>
+							</td>
+							<td><!-- mei -->
+								@if($presensi->mei == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->mei == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- jun -->
+								@if($presensi->jun == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->jun == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- jul -->
+								@if($presensi->jul == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->jul == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- agu -->
+								@if($presensi->agu == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->agu == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- sep -->
+								@if($presensi->sep == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->sep == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- okt -->
+								@if($presensi->okt == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->okt == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- nov -->
+								@if($presensi->nov == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->nov == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
+							<td><!-- des -->
+								@if($presensi->des == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->des == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
+							</td>
 									</tr>
 									@endforeach
 								</tbody>

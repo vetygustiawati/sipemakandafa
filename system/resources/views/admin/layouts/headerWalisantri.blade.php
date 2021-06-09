@@ -1,4 +1,4 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background: #AC3B61; color: white; !important">
    <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -19,10 +19,22 @@
             @else
             Silahkan Login
             @endif
-         <img src="{{url('public')}}/dist/img/aku.jpg" alt="User Avatar" style="height: 100%;"class=" img-circle">
+         <img src="{{url('public')}}/dist/img/user.jpg" alt="User Avatar" style="height: 100%;"class=" img-circle">
         </a> 
+        <!-- <div class="dropdown-menu dropdown-menu-right">
+          <a href="profile" class="dropdown-item has-icon">
+            <i class="far fa-user"></i> Profile
+          </a> -->
+           <div class="dropdown-menu dropdown-menu-right">
+          
+          <div class="dropdown-divider"></div>
+          <a href="{{url('logout')}}" onclick="return confirm('Apakah Anda Yakin Ingin Keluar?')"  class="dropdown-item has-icon text-danger">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </div>
+          
         
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <!-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <div class="dropdown-divider"></div>
           <a href="{{url('logout')}}" class="dropdown-item">
             
@@ -34,7 +46,7 @@
             
           </a>
           <div class="dropdown-divider"></div>
-        </div>
+        </div> -->
       </li> 
     </ul>
   </nav>

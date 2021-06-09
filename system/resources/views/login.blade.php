@@ -1,93 +1,114 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIPEMAKAN</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Login &mdash; SIPEMAKAN</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{url('public')}}/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="{{url('public')}}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{url('public')}}/dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="{{url('login')}}"><b>SIPEMAKAN</b></a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-   
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="{{url('public')}}/node_modules/bootstrap-social/bootstrap-social.css">
+    <script src="https://kit.fontawesome.com/5cc76ac70c.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" type="text/css" href="{{url('public')}}/fontawesome-free/css/all.css">
     
-    
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
 
-       @include('admin.template.utils.notif')
-      <form action="{{url('login')}}" method="post">
-         @csrf
-        <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" name="email">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{url('public')}}/assets/css/style.css">
+    <link rel="stylesheet" href="{{url('public')}}/assets/css/components.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <section class="section">
+        <div class="d-flex flex-wrap align-items-stretch">
+          <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
+            <div class="p-4 m-3 text-center"><br><br><br><br><br>
+              <h4 class="text-dark font-weight-normal text-center">Welcome to <br><span class="font-weight-bold">Sistem Informasi Pembayaran<br>Uang Makan Santri</span>
+              </h4>
+              <p class="text-muted">Before you get started, you must login</p>
+              <form method="POST" action="{{url('login')}}" class="needs-validation text-left" novalidate="">
+                 @include('admin.template.utils.notif')
+                @csrf
+                <div class="form-group ">
+                  <label for="username">Username</label>
+                  <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <i class="fa fa-user"></i>
+                            </div>
+                          </div>
+                          <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus placeholder="Username">
+                  <div class="invalid-feedback">
+                    Maaf, anda belum memasukan Username
+                  </div>
+                </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="d-block">
+                    <label for="password" class="control-label">Password</label>
+                  </div>
+                    <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="fa fa-lock"></i>
+                              </div>
+                            </div>
+                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required placeholder="Password">
+                    <div class="invalid-feedback">
+                      Maaf, anda belum memasukan Password
+                    </div>
+                  </div>
+                </div><br>
+
+
+                  <div class="form-group text-center">
+                  <button onclick="login()" type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="3">
+                    Login
+                  </button>
+                </div><br>
+
+              </form>
+
+              <div class="text-center mt-5 text-small">
+                Copyright &copy; Vety Gustiawati
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom" data-background="{{url('public')}}/assets/img/unsplash/logo1.jpg">
+            <div class="absolute-bottom-left index-2">
+              <div class="text-light p-5 pb-2">
+                <div class="mb-5 pb-3">
+                  <h3>Sistem Informasi Pembayaran</h3>
+                  <h5 class="font-weight-normal text-muted-transparent">Uang Makan Santri</h5>
+                </div>
+                <!-- Photo by <a class="text-light bb" target="_blank" href="https://unsplash.com/photos/a8lTjWJJgLA">Justin Kauffman</a> on <a class="text-light bb" target="_blank" href="https://unsplash.com">Unsplash</a> -->
+              </div>
             </div>
           </div>
         </div>
-        <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" name="password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
-
-      
-      <!-- /.social-auth-links -->
-
-      <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p>
-      <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
-      </p>
+      </section>
     </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
 
-<!-- jQuery -->
-<script src="{{url('public')}}plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="{{url('public')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="{{url('public')}}/dist/js/adminlte.min.js"></script>
+    <!-- General JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="{{url('public')}}/assets/js/stisla.js"></script>
 
-</body>
-</html>
+    <!-- JS Libraies -->
+
+    <!-- Template JS File -->
+    <script src="{{url('public')}}/assets/js/scripts.js"></script>
+    <script src="{{url('public')}}/assets/js/custom.js"></script>
+    
+    <!-- Page Specific JS File -->
+  </body>
+  </html>
+

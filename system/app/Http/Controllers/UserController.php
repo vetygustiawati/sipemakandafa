@@ -1,6 +1,8 @@
 <?php 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\Santri;
+
 class UserController extends Controller{
 	function index(){
 		$data['list_user'] = User::all();
@@ -8,11 +10,13 @@ class UserController extends Controller{
 		return view('admin.user.index', $data);
 	}
 	function create(){
-		return view('admin.user.create');
+		$data['santri'] = Santri::all();
+		return view('admin.user.create',$data);
 	}
 	function store(){
 		$user = new User;
 		$user->id_user = request('id_user');
+		$user->id_santri = request('id_santri');
 		$user->nama = request ('nama');
 		$user->username = request ('username');
 		$user->email = request ('email');
@@ -34,6 +38,7 @@ class UserController extends Controller{
 	function update(User $user){
 	
 		$user->id_user = request ('id_user');
+		$user->id_santri = request('id_santri');
 		$user->nama = request ('nama');
 		$user->username = request ('username');
 		$user->email = request ('email');
@@ -47,11 +52,5 @@ class UserController extends Controller{
 
 		return redirect('admin/user')->with('danger','Data Berhasil Dihapus');
 
-	}
-	function dashboard(){
-		return view('admin/dashboard')->with('success','Login Berhasil');
-	}
-	function profil(){
-		return view('admin/profil');
 	}
 }

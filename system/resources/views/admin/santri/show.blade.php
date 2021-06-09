@@ -26,7 +26,8 @@
 							<hr>
 							<h6>No HP : {{$santri->no_hp}}</h6>
 							<hr>
-							
+						<a href="{{url('admin/santri', $santri->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+											@include('admin.template.utils.delete', ['url' => url('admin/santri', $santri->id)])	
 							
 						</div>
 					</div>

@@ -8,9 +8,11 @@
 				<div class="card">
 					<div class="card-header">
 						Detail Data Presensi
-					</div>
+				</div>
 						<div class="card-body">
 							<h6>Id Santri : {{$presensi->id_santri}}</h36>
+							<hr>
+							<h6>Bulan : {{$presensi->bln}}</h36>
 							<hr>
 							<h6>Tanggal : {{$presensi->tgl_presensi}}</h6>
 							<hr>

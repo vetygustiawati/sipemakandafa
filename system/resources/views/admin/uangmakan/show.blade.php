@@ -14,7 +14,7 @@
 							<hr>
 							<h6>Id User : {{$uangmakan->id_user}}</h6>
 							<hr>
-							<h6>Nama Administrasi : {{$uangmakan->nama_adm}}</h6>
+							<h6>Id Administrasi : {{$uangmakan->id_administrasi}}</h6>
 							<hr>
 							<h6>Nominal : {{$uangmakan->nominal}}</h6>
 							<hr>
@@ -26,10 +26,15 @@
 							<hr>
 								
 								
-							
+							<a href="{{url('admin/uangmakan/kwitansiThermo', $uangmakan->id)}}" class="btn btn-dark float-right" target="_blank"><i class="fa fa-print"></i>Cetak Kwitansi</a>
+
+						<!-- <a href="{{url('admin/uangmakan/kwitansiTinta', $uangmakan->id)}}" class="btn btn-dark float-right" target="_blank"><i class="fa fa-print"></i> Print Tinta</a> -->
+
+						<a href="{{url('admin/uangmakan/laporanBulanan', $uangmakan->id)}}" class="btn btn-dark float-right" target="_blank"><i class="fa fa-print"></i>Cetak Laporan</a>
 							
 							
 						</div>
+						
 					</div>
 				</div>
 			</div>

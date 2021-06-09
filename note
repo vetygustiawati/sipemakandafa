@@ -1,0 +1,14 @@
+A. aplikasi
+	1. sidebar nama dihome (semua user)
+	2. profile admin
+(ok)3. profile edit hapus di tabel presensi not found 
+(ok)4. data berhasil ditambahkan tapi tidak mucul diindex sedangkan di database muncul (pada tabel uang makan)
+(tidak)5. relasi
+	6. cetak laporan admin dan pengasuh (error jika ada data baru ditambahkan)
+(ok)7. cetak kwitansi admin dan pengasuh (error jika ada data baru ditambahkan)
+(ok)8. data tabel di table presensi
+(ok)9. tanda ceklis dan x di table presensi (admin dan wali santri)
+(ok)10. mucul jan-des dengan nominal 300000 di tabel uang makan (admin dan wali santri)
+(ok)11. dashboard di wali santri dan pengasuh ganti
+B. laporan
+C. PPT
