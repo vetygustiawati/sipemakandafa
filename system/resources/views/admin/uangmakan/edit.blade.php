@@ -89,7 +89,7 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-          <input type="text" name="tgl" value="{{$uangmakan->tgl}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+         <input type="date" name="tgl" class="form-control bg-light" placeholder="Tanggal Presensi" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')" value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("d/m/Y"); ?>">>
           </div>
         </div>
       </div>
@@ -123,8 +123,8 @@
       </div>
       <div class="text-right">
         <button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-        <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
-        </button>
+        <!-- <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
+        </button> -->
 									</form>
 						</div>
 					</div>

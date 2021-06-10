@@ -95,8 +95,8 @@
       
       <div class="text-right">
         <button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-        <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
-        </button>
+     <!--    <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
+        </button> -->
 					</form>
 						<table>
 							

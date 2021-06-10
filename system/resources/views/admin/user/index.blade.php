@@ -13,7 +13,7 @@
 					<table class="table table-datatable">
 							<thead>
 									<th>No</th>
-									<th>Aksi</th>
+									<!-- <th>Aksi</th> -->
 									<th>Username</th>
 									<th>Nama</th>
 									<th>Email</th>
@@ -24,15 +24,15 @@
 									@foreach($list_user as $user)
 									<tr>
 										<td>{{$loop->iteration}}</td>
-										<td>
+										<!-- <td>
 											<div class="btn-group">
 											<a href="{{url('admin/user', $user->id)}}"class="btn btn-dark"> <i class="fa fa-info"></i></a>
 											<a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
 											@include('admin.template.utils.delete', ['url' => url('admin/user', $user->id)])
 											</div>
-										</td>
+										</td> -->
 										<td>{{$user->username}}</td>
-										<td>{{$user->nama}}</td>
+										<td><a href="{{url('admin/user', $user->id)}}">{{$user->nama}}</a></td>
 										<td>{{$user->email}}</td>
 										<td>{{$user->level}}</td>
 										

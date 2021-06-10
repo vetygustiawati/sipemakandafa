@@ -13,7 +13,7 @@
 					<table class="table table-datatable">
 							<thead>
 									<th>No</th>
-									<th>Aksi</th>
+									<!-- <th>Aksi</th -->>
 									<th>Nama Santri</th>
 									<th>Jan</th>
 									<th>Feb</th>
@@ -32,14 +32,14 @@
 									@foreach($list_presensi as $presensi)
 									<tr>
 										<td>{{$loop->iteration}}</td>
-										<td>
+										<!-- <td>
 											<div class="btn-group">
 											<a href="{{url('admin/presensi', $presensi->idpresensi)}}"class="btn btn-dark"> <i class="fa fa-info"></i></a>
 											<a href="{{url('admin/presensi', $presensi->idpresensi)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
 											@include('admin.template.utils.delete', ['url' => url('admin/presensi', $presensi->idpresensi)])
 											</div>
-										</td>
-										<td>{{$presensi->nama_santri}}</td>
+										</td> -->
+										<td><a href="{{url('admin/presensi', $presensi->idpresensi)}}">{{$presensi->nama_santri}}</a></td>
 										<!-- jan -->
 										<td>
 											@if($presensi->jan == 'hadir')
@@ -65,14 +65,12 @@
 							</td>
 							<td><!-- apr -->
 								
-								<h6>Ramadhan</h6>
-								<!-- @if($presensi->apr == 'hadir')
+							<!-- 	<h6>Ramadhan</h6> -->
+								@if($presensi->apr == 'hadir')
 									<button class="btn btn-success"><i class="fa fa-check"></i></button>
 								@elseif($presensi->apr == '0')
 									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
-									@elseif($presensi->apr == 'romadhon')
-											<h6>Romadhon</h6>
-								@endif -->
+								@endif
 							</td>
 							<td><!-- mei -->
 								@if($presensi->mei == 'hadir')

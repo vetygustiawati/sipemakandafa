@@ -24,7 +24,8 @@
 							<hr>
 							<h6>Keterangan : {{$uangmakan->keterangan}}</h6>
 							<hr>
-								
+							<a href="{{url('admin/uangmakan', $uangmakan->iduangmakan)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+											@include('admin.template.utils.delete', ['url' => url('admin/uangmakan', $uangmakan->iduangmakan)])	
 								
 							<a href="{{url('admin/uangmakan/kwitansiThermo', $uangmakan->id)}}" class="btn btn-dark float-right" target="_blank"><i class="fa fa-print"></i>Cetak Kwitansi</a>
 

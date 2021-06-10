@@ -14,7 +14,7 @@
 					<table class="table table-datatable">
 							<thead>
 									<th>No</th>
-									<th>Aksi</th>
+									<!-- <th>Aksi</th> -->
 									<th>Nama santri</th>
 									<th>Jan</th>
 									<th>Feb</th>
@@ -34,14 +34,14 @@
 									@foreach($list_uangmakan as $uangmakan)
 									<tr>
 										<td>{{$loop->iteration}}</td>
-										<td>
+										<!-- <td>
 											<div class="btn-group">
 											<a href="{{url('admin/uangmakan', $uangmakan->iduangmakan)}}"class="btn btn-dark"> <i class="fa fa-info"></i></a>
 											<a href="{{url('admin/uangmakan', $uangmakan->iduangmakan)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
 											@include('admin.template.utils.delete', ['url' => url('admin/uangmakan', $uangmakan->iduangmakan)])
 											</div>
-										</td>
-										<td>{{$uangmakan->nama_santri}}</td>
+										</td> -->
+										<td><a href="{{url('admin/uangmakan', $uangmakan->iduangmakan)}}">{{$uangmakan->nama_santri}}</a></td>
 										
 										<td>
 											@if($uangmakan->jan == '300000')

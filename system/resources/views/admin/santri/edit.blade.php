@@ -8,7 +8,7 @@
         <div class = "card">
           <div class ="card-header">
           
-           <a href="{{url('admin/santri')}}" class="pull-right btn btn-primary">
+           <a href="{{url('admin/santri/putra')}}" a href="{{url('admin/santri/putri')}}" class="pull-right btn btn-primary">
       <i class="fas fa-angle-double-left"> Kembali</i>
     </a>  
     <h5 class="ml-auto float-right">Ubah Data Santri</h5>
@@ -123,8 +123,8 @@
       </div>
       <div class="text-right">
         <button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-        <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
-        </button>
+        <!-- <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
+        </button> -->
       </div>						
 							
 									</form>

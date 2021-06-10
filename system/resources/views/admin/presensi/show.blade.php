@@ -21,7 +21,8 @@
 							<h6>Keterangan : {{$presensi->keterangan}}</h6>
 							<hr>
 							
-							
+							<a href="{{url('admin/presensi', $presensi->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+							@include('admin.template.utils.delete', ['url' => url('admin/presensi', $presensi->id)])
 							
 						</div>
 					</div>

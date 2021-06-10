@@ -63,7 +63,7 @@ class PresensiController extends Controller{
 		return view('admin.presensi.create');
 	}
 	function store(){
-		dd(request()->all());
+		// dd(request()->all());
 		$presensi = new Presensi;
 		$presensi->id_santri = request ('id_santri');
 		$presensi->bln = request ('bln');

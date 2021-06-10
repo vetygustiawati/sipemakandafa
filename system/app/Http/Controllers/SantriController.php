@@ -28,6 +28,7 @@ class SantriController extends Controller{
 
 	}
 	function create(){
+		
 		return view('admin.santri.create');
 	}
 	function store(){

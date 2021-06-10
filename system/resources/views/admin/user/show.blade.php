@@ -20,7 +20,8 @@
 							<h6>Level : {{$user->level}}</h6>
 							<hr>
 							
-							
+							<a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+							@include('admin.template.utils.delete', ['url' => url('admin/user', $user->id)])
 							
 						</div>
 					</div>
