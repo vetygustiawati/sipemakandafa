@@ -27,17 +27,23 @@
 	                    @endforeach
 	                  </select>
 	                </div>		 -->
-	                <div class="form-group row">
-        <label for="" class="col-sm-2 col-form-label">Id Santri</label>
-        <div class="input-group col-sm-10">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <i class="fa fa-table"></i> 
-            </div>
+  <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Id Santri</label>
+      <div class="input-group col-sm-10">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-table"></i> 
           </div>
-          <input type="text" name="id_santri" class="form-control bg-light" placeholder="Id Santri" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
-        </div>          
-      </div>
+        </div>
+        <select name="id_santri" class="form-control select2" required="">
+          <option>--Pilih Santri--</option>
+          @foreach($list_santri as $d)
+          <option value="{{$d->id_santri}}">{{$d->id_santri}}-{{$d->nama_santri}}</option>
+          @endforeach
+        </select>
+      </div>          
+    </div>
+    
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Id User</label>
         <div class="col-sm-10">
@@ -61,7 +67,7 @@
             </div>
           </div>
       <select name="id_administrasi" class="form-control">
-                        <option value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("m"); ?>"><?php date_default_timezone_set('Asia/Pontianak'); echo date("m"); ?></option>
+                        <option value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("M"); ?>"><?php date_default_timezone_set('Asia/Pontianak'); echo date("M"); ?></option>
                         <option value="01">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>

@@ -52,7 +52,8 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananAdmin']);
 
 	//laporan
-			Route::get('laporan',[LaporanController::class,'index']);
+	Route::get('laporanCari',[LaporanController::class,'cari']);
+	Route::get('laporan',[LaporanController::class,'index']);
 			
 	Route::resource('user', UserController::class)->middleware('auth');
  });

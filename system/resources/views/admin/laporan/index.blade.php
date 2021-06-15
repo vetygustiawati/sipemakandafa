@@ -12,25 +12,27 @@
 					</div>
 				</div> -->
 				<div class="card-body">
+				<form action="{{url('admin/laporanCari')}}" method="get">
 					<div class="col-sm-12">
 						<label class="col-sm-3 col-form-label">Dari Kapan</label>
 						<div class="input-group mb-3">
-		                  <div class="input-group-prepend">
-		                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-		                  </div>
+				               <div class="input-group-prepend">
+				               	<span class="input-group-text"><i class="fas fa-calendar"></i></span>
+				               </div>
 							<input type="date" name="dari" id="" class="form-control">
-		                </div>
+		               	</div>
 					</div>
 					<div class="col-sm-12">
 						<label class="col-sm-3 col-form-label">Sampai Kapan</label>
 						<div class="input-group mb-3">
-		                  <div class="input-group-prepend">
-		                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-		                  </div>
+				               <div class="input-group-prepend">
+				               	<span class="input-group-text"><i class="fas fa-calendar"></i></span>
+				               </div>
 							<input type="date" name="sampai" id="" class="form-control">
-		                </div>
+		               	</div>
 					</div>
-					<button class="btn btn-primary float-right">OK</button>
+					<button type="input" class="btn btn-primary float-right">Cari</button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -73,12 +75,10 @@
 								<th>Des</th>
 							</thead>
 							<tbody>
-			                @php
-			                $count = 1;
-			                @endphp
+			                @foreach ($laporan_presensi as $d)
 							<tr>
-								<th>1</th>
-								<th>1114001</th>
+								<th>{{$loop->iteration}}</th>
+								<th>{{$d->id_santri}}</th>
 								<th>Saya</th>
 								<th>Jan</th>
 								<th>Feb</th>
@@ -93,6 +93,7 @@
 								<th>Nov</th>
 								<th>Des</th>
 							</tr>
+						@endforeach
 							</tbody>
 						</table>
 					</div>

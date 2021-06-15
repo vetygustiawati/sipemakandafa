@@ -43,7 +43,7 @@ div.WordSection1
 </head>
 
 <body lang=EN-US>
-@foreach($list_uangmakan as $uangmakan)
+
 <div class=WordSection1>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=208
@@ -52,7 +52,8 @@ div.WordSection1
   <td width=110 colspan=2 valign=top style='width:82.75pt;border:none;
   border-left:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-size:16.0pt;font-family:Algerian'>SIPEMAKAN</span>
+  normal'><span style='font-size:16.0pt;font-family:Algerian'>SIDAFA</span><span
+  style='font-size:7.0pt;font-family:Algerian'>new</span></p>
   </td>
   <td width=98 style='width:73.2pt;border:none;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
@@ -61,7 +62,7 @@ div.WordSection1
   font-family:"Times New Roman","serif"'>(SistemInformasi </span></b></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b><span style='font-size:8.0pt;
-  font-family:"Times New Roman","serif"'>Pembayaran Uang Makan)</span></b></p>
+  font-family:"Times New Roman","serif"'>Darul Fadhilah)</span></b></p>
   </td>
  </tr>
  <tr style='height:22.7pt'>
@@ -70,7 +71,7 @@ div.WordSection1
   padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b><span style='font-size:7.0pt;
-  font-family:"Arial","sans-serif"'>KWITANSI PEMBAYARAN UANG MAKAN</span></b></p>
+  font-family:"Arial","sans-serif"'>KWITANSI PEMBAYARAN ADMINISTRASI</span></b></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>
@@ -82,7 +83,7 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$uangmakan->id}}</span></p>
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$list_uangmakan->id}}</span></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>
@@ -95,9 +96,24 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$uangmakan->id_santri}}</span></p>
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$list_uangmakan->id_santri}}</span></p>
   </td>
  </tr>
+ 
+ <tr style='height:11.35pt'>
+  <td width=91 valign=top style='width:68.25pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>No Pend</span>----<span
+  style='font-family:"Times New Roman","serif"'> </span></p>
+  </td>
+  <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{--$list_uangmakan->no_pend--}}</span></p>
+  </td>
+ </tr>
+ 
  <tr style='height:11.35pt'>
   <td width=91 valign=top style='width:68.25pt;border:none;border-left:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
@@ -107,7 +123,7 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$uangmakan->nama_santri}}</span></p>
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$list_uangmakan->nama_santri}}</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
   </td>
@@ -116,12 +132,12 @@ div.WordSection1
   <td width=91 valign=top style='width:68.25pt;border:none;border-left:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'>Pembayaran </span>----</p>
+  normal'><span style='font-family:"Times New Roman","serif"'>Pembayaran</span></p>
   </td>
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{($uangmakan->nama_administrasi)}}</span></p>
+  115%'><span style='font-size:10.0pt;line-height:115%;font-family:"Times New Roman","serif"'>{{--$list_uangmakan->administrasi->nama_administrasi--}}</span></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>
@@ -133,19 +149,19 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>Rp.{{number_format($uangmakan->nominal)}}</span></p>
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>Rp.{{number_format($list_uangmakan->nominal)}}</span></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>
   <td width=91 valign=top style='width:68.25pt;border:none;border-left:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'>Tanggal</span>--------</p>
+  normal'><span style='font-family:"Times New Roman","serif"'>Waktu</span>--------</p>
   </td>
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$uangmakan->tgl}}</span></p>
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{--$list_uangmakan->waktu--}}</span></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>
@@ -157,7 +173,7 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><b><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$uangmakan->status}}</span></b></p>
+  115%'><b><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$list_uangmakan->status}}</span></b></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>
@@ -169,7 +185,7 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'>{{$uangmakan->keterangan}}</span></p>
+  normal'><span style='font-family:"Times New Roman","serif"'>{{$list_uangmakan->keterangan}}</span></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>
@@ -181,12 +197,16 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$uangmakan->username}}</span></p>
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$list_uangmakan->username}}</span></p>
   </td>
  </tr>
  <tr>
   <td width=208 colspan=3 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:115%'><span style='line-height:115%;font-family:
   "Times New Roman","serif"'>Simpan tanda terima ini</span></p>
@@ -196,34 +216,69 @@ div.WordSection1
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:115%'><span style='line-height:115%;font-family:
   "Times New Roman","serif"'>Sebagai bukti yang sah</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
   </td>
  </tr>
- <tr style='height:70.9pt'>
+<tr style='height:70.9pt'>
   <td width=208 colspan=3 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:70.9pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>Id
-  santri---{{$uangmakan->id_santri}}</span></p>
+  santri---{{$list_uangmakan->id_santri}}</span></p>
+  
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>Nama---{{$uangmakan->nama_santri}}</span></p>
+  text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>No Pend---{{--$list_uangmakan->no_pend--}}</span></p>
+  
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>Nama---{{$list_uangmakan->nama_santri}}</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
   </td>
  </tr>
- <tr style='height:70.85pt'>
+<tr style='height:70.85pt'>
   <td width=208 colspan=3 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:70.85pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span style='font-size:14.0pt;
-  font-family:"Times New Roman","serif"'>Rp.{{number_format($uangmakan->nominal)}}</span></p>
+  font-family:"Times New Roman","serif"'>{{--$list_uangmakan->administrasi->nama_administrasi--}}</span></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>{{$uangmakan->username}}</span></p>
+  text-align:center;line-height:normal'><span style='font-size:14.0pt;
+  font-family:"Times New Roman","serif"'>Rp.{{number_format($list_uangmakan->nominal)}}</span></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>{{$uangmakan->tgl}}</span></p>
+  text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>{{$list_uangmakan->username}}</span></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><b><span style='font-family:"Times New Roman","serif"'>{{$uangmakan->status}}</span></b></p>
+  text-align:center;line-height:normal'><span style='font-family:"Times New Roman","serif"'>{{--$list_uangmakan->waktu--}}</span></p>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b><span style='font-family:"Times New Roman","serif"'>{{$list_uangmakan->status}}</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
   </td>
  </tr>
  <tr height=0>
@@ -234,7 +289,9 @@ div.WordSection1
 </table>
 
 </div>
-@endforeach
-</body>
 
+</body>
+  <script>
+    window.print();
+  </script>
 </html>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Presensi;
 
 class LaporanController extends Controller
 {
@@ -11,33 +12,11 @@ class LaporanController extends Controller
         return view('admin.laporan.index');
     }
 
-    public function create()
+    public function cari()
     {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
+        $dari = request()->dari;
+        $sampai = request()->sampai;
+        $data['laporan_presensi'] = Presensi::whereBetween('tgl_presensi', [$dari, $sampai])->get();
+        return view('admin.laporan.index',$data);
     }
 }

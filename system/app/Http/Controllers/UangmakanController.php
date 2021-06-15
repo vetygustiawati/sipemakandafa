@@ -9,7 +9,7 @@ class UangmakanController extends Controller{
 	function indexAdmin(){
 		
 		$data['list_uangmakan'] =  DB::table('uangmakan')
-	        ->select('santri.id','santri.id_santri','santri.nama_santri', 'tgl', 'status', 'keterangan','user.id_user','user.nama', 'user.username','nama_administrasi', 'nominal', 'uangmakan.id as iduangmakan',
+	        ->select('uangmakan.id as idu','santri.id','santri.id_santri','santri.nama_santri', 'tgl', 'status', 'keterangan','user.id_user','user.nama', 'user.username','nama_administrasi', 'nominal', 'uangmakan.id as iduangmakan',
 	        	DB::raw("sum(case when id_administrasi='01' THEN nominal else 0 end )as jan"),
 	        	DB::raw("sum(case when id_administrasi='02' THEN nominal else 0 end )as feb"),
 	        	DB::raw("sum(case when id_administrasi='03' THEN nominal else 0 end )as mar"),
@@ -139,28 +139,16 @@ class UangmakanController extends Controller{
 	}
 
 	function kwitansiThermo(Uangmakan $uangmakan){
-		$data['list_uangmakan'] =  DB::table('uangmakan')
-	        ->select('santri.id','santri.id_santri','santri.nama_santri', 'tgl', 'status', 'keterangan','user.id_user','user.nama', 'user.username','administrasi.nama_administrasi', 'nominal', 'uangmakan.id as iduangmakan',
-	        	DB::raw("sum(case when id_administrasi='01' THEN nominal else 0 end )as jan"),
-	        	DB::raw("sum(case when id_administrasi='02' THEN nominal else 0 end )as feb"),
-	        	DB::raw("sum(case when id_administrasi='03' THEN nominal else 0 end )as mar"),
-	        	DB::raw("sum(case WHEN id_administrasi='04' THEN nominal ELSE 0 end) as apr"),
-				DB::raw("sum(case WHEN id_administrasi='05' THEN nominal ELSE 0 end) as mei"),
-				DB::raw("sum(case WHEN id_administrasi='06' THEN nominal ELSE 0 end) as juni"),
-				DB::raw("sum(case WHEN id_administrasi='07' THEN nominal ELSE 0 end) as juli"),
-				DB::raw("sum(case WHEN id_administrasi='08' THEN nominal ELSE 0 end) as agt"),
-				DB::raw("sum(case WHEN id_administrasi='09' THEN nominal ELSE 0 end) as sep"),
-				DB::raw("sum(case WHEN id_administrasi='10' THEN nominal ELSE 0 end) as okt"),
-				DB::raw("sum(case WHEN id_administrasi='11' THEN nominal ELSE 0 end) as nov"),
-				DB::raw("sum(case WHEN id_administrasi='12' THEN nominal ELSE 0 end) as des"),
-				DB::raw("count(nominal) as acount")
-	        	)
-	    	->join ('santri', 'uangmakan.id_santri', '=', 'santri.id_santri')
-	    	->join ( 'user', 'uangmakan.id_user', '=', 'user.id') 
-	    	->join ( 'administrasi', 'uangmakan.id_administrasi', '=', 'administrasi.id') 
-	    	->groupBy ('id_santri')
-	        ->get();
-		
+		$id = $uangmakan->id;
+		$data['list_uangmakan'] = DB::table('uangmakan')
+		->select('santri.id','santri.id_santri','santri.nama_santri', 'tgl', 'status', 'keterangan','user.id_user','user.nama', 'user.username','administrasi.nama_administrasi', 'nominal', 'uangmakan.id as iduangmakan')
+		->join ('santri', 'uangmakan.id_santri', '=', 'santri.id_santri')
+    	->join ( 'user', 'uangmakan.id_user', '=', 'user.id') 
+    	->join ( 'administrasi', 'uangmakan.id_administrasi', '=', 'administrasi.id') 
+		->where('uangmakan.id',$id)
+		->get();
+		$data['list_uangmakan'] = $data['list_uangmakan'][0];
+		// dd($data['list_uangmakan']);
 		return view('admin.uangmakan.kwitansiThermo', $data);
 	}
 
