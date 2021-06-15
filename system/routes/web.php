@@ -10,7 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LaporanController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 Route::get('base', [HomeController::class, 'showBaseAdmin']);
 
@@ -23,8 +23,8 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('home', [HomeController::class, 'homeAdmin']);
 	Route::get('profile', [HomeController::class, 'profileAdmin']);
 
-	Route::get('santri/{gender}', [SantriController::class, 'indexAdmin']);
     Route::get('santri/create', [SantriController::class, 'create']);
+	Route::get('santri/{gender}', [SantriController::class, 'indexAdmin']);
     Route::post('santri', [SantriController::class, 'store']);
     Route::get('santri/show/{santri}', [SantriController::class, 'showAdmin']);
     Route::get('santri/{santri}/edit', [SantriController::class, 'edit']);

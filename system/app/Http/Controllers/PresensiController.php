@@ -27,7 +27,7 @@ class PresensiController extends Controller{
 	    	->orderBy('nama_santri','asc')
 	    	->groupBy ('id_santri')
 	        ->get();
-
+	    $data['list_santri'] = Santri::all();
 		return view('admin.presensi.index', $data);
 	}
 	function indexWalisantri(){
@@ -63,13 +63,13 @@ class PresensiController extends Controller{
 		return view('admin.presensi.create');
 	}
 	function store(){
-		// dd(request()->all());
 		$presensi = new Presensi;
 		$presensi->id_santri = request ('id_santri');
 		$presensi->bln = request ('bln');
 		$presensi->tgl_presensi = request ('tgl_presensi');
 		$presensi->status = request ('status');
 		$presensi->keterangan = request ('keterangan');
+		// dd(request()->all());
 		$presensi->save();
 			
 			return redirect('admin/presensi')->with('success','Data Berhasil Ditambahkan');

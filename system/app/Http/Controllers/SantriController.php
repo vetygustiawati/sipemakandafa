@@ -43,7 +43,7 @@ class SantriController extends Controller{
 		$santri->no_hp = request ('no_hp');
 		$santri->save();
 			
-			return redirect('admin/santri')->with('success','Data Berhasil Ditambahkan');
+		return redirect('admin/santri/putra')->with('success','Data Berhasil Ditambahkan');
 		
 	}
 	function showAdmin(Santri $santri){
@@ -70,7 +70,7 @@ class SantriController extends Controller{
 		$santri->no_hp = request ('no_hp');
 		$santri->save();
 
-		return redirect('admin/santri')->with('success','Data Berhasil Diedit');
+		return redirect('admin/santri/putra')->with('success','Data Berhasil Diedit');
 	}
 	function destroy(Santri $santri){
 		$santri->delete();

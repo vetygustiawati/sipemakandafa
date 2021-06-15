@@ -7,9 +7,9 @@
 				<div class = "card">
 					<div class ="card-header">
 					
-           <a href="{{url('admin/santri')}}" class="pull-right btn btn-primary">
-      <i class="fas fa-angle-double-left"> Kembali</i>
-    </a>  
+            <button onclick="window.history.back();" class="pull-right btn btn-primary">
+              <i class="fas fa-angle-double-left"> Kembali</i>
+            </button>  
     <h5 class="ml-auto float-right">Tambah Data Santri</h5>
 					</div>
 

@@ -1,19 +1,77 @@
 @extends('admin.template.base')
 @section('content')
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 mt-3">
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title">Tambah Absensi</div>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+
+	<form action="{{url('admin/presensi')}}" method="post">
+		@csrf
+    <input type="hidden" name="bln" required="" value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("m"); ?>">
+	<input type="hidden" name="status" required="" value="hadir">
+	<input type="hidden" name="tgl_presensi" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')" value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("y/m/d"); ?>">
+	<input type="hidden" name="keterangan" required="" value="">
+
+	<div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Id Santri</label>
+      <div class="input-group col-sm-10">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-table"></i> 
+          </div>
+        </div>
+        <select name="id_santri" class="form-control select2" required="">
+        	<option>--Pilih Santri--</option>
+        	@foreach($list_santri as $d)
+        	<option value="{{$d->id_santri}}">{{$d->id_santri}}-{{$d->nama_santri}}</option>
+        	@endforeach
+        </select>
+      </div>          
+    </div>
+    <div class="form-group row">
+    </div>
+
+   
+    <div class="text-right">
+      <button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+      <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
+      </button>
+		</form>
+
+	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-16 mt-5">
+		<div class="col-md-12 mt-3">
 			<div class="card">
 				<div class="card-header">
-					<H4>Data Presensi</H4>
-					<a href="{{url('admin/presensi/create')}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a>
+					<div class="card-title">Data Presensi</div>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fa fa-plus"></i></button>
+					</div>
+					<!-- <a href="{{--url('admin/presensi/create')--}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a> -->
 				</div>
 				<div class="card-body">
 					<table class="table table-datatable">
 							<thead>
 									<th>No</th>
-									<!-- <th>Aksi</th -->>
+									<!-- <th>Aksi</th -->
 									<th>Nama Santri</th>
 									<th>Jan</th>
 									<th>Feb</th>
