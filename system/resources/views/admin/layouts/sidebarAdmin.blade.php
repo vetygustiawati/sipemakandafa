@@ -41,17 +41,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{url('admin/profil')}}" class="nav-link {{checkRouteActive('admin/profil')}}" style="background: #EDC7B7; color: black; !important">
-              <i class="nav-icon fas fa-mosque"></i>
-              <p>
-                Profil
-              </p>
-            </a>
-          </li>
-            
-          
-
+  
           <li class="nav-item">
             <a href="#" class="nav-link {{checkRouteActive('admin/santri/putra')}}{{checkRouteActive('admin/santri/putri')}}" style="background: #EDC7B7; color: black; !important">
               <i class="nav-icon fas fa-user-graduate"></i>
@@ -104,7 +94,7 @@
           </li>
           <li class="nav-item">
             <a href="{{url('admin/laporan')}}" class="nav-link {{checkRouteActive('admin/laporan')}}" style="background: #EDC7B7; color: black; !important">
-            <i class="nav-icon fas fa-user"></i>
+            <i class="nav-icon fas fa-layer-group"></i>
               <p>
               Laporan Presensi
                 

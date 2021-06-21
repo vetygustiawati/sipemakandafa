@@ -8,14 +8,14 @@
         <div class = "card">
           <div class ="card-header">
           
-           <a href="{{url('admin/santri/putra')}}" a href="{{url('admin/santri/putri')}}" class="pull-right btn btn-primary">
-      <i class="fas fa-angle-double-left"> Kembali</i>
-    </a>  
+          <button onclick="window.history.back();" class="pull-right btn btn-primary">
+              <i class="fas fa-angle-double-left"> Kembali</i>
+   </button>
     <h5 class="ml-auto float-right">Ubah Data Santri</h5>
           </div>
 
           <div class="card-body">
-							<form action="{{url('admin/santri', $santri->id)}}" method="post">
+							<form action="{{url('admin/santri', $santri->id)}}" method="post"  enctype="multipart/form-data">
 							@csrf
 							@method("PUT")
 							<div class="form-group row">
@@ -39,6 +39,20 @@
             </div>
           </div>
           <input type="text" name="nama_santri" value="{{$santri->nama_santri}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Foto</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-table"></i> 
+            </div>
+          </div>
+          <input type="file" name="foto" class="form-control bg-light" accept=".png" 
+          required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
           </div>
         </div>
       </div>

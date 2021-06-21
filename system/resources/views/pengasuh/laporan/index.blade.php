@@ -1,4 +1,4 @@
-@extends('admin.template.base')
+@extends('pengasuh.template.base')
 @section('content')
 <br>
 <div class="container">
@@ -11,9 +11,8 @@
 						
 					</div>
 				</div> -->
-				
 				<div class="card-body">
-				<form action="{{url('admin/laporanCari')}}" method="get">
+				<form action="{{url('pengasuh/laporanCari')}}" method="get">
 					<div class="col-sm-12">
 						<label class="col-sm-3 col-form-label">Dari Kapan</label>
 						<div class="input-group mb-3">
@@ -60,7 +59,7 @@
 							<thead>
 								<th>NO</th>
 								<th>Nama Santri</th>
-								<th>Nama Wali Santri</th>
+								<th>Nama Wali  Santri</th>
 								<th>Jan</th>
 								<th>Feb</th>
 								<th>Mar</th>

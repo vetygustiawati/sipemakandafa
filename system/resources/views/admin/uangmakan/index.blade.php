@@ -3,20 +3,79 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 mt-5">
+		<div class="col-md-12 mt-3">
 			<div class="card">
 				<div class="card-header">
-					<h4>Data Uang Makan</h4>
-					
-					<a href="{{url('admin/uangmakan/create')}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a>
+					<div class="card-title">Tambah Uang Makan</div>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
 				</div>
 				<div class="card-body">
-					<div class="table-responsive">
-						<table class="table table-datatable table-bordered table-sm table-hover">
+
+	<form action="{{url('admin/uangmakan')}}" method="post">
+		@csrf
+    
+	<input type="hidden" name="id_user" required="" value="03">
+	<input type="hidden" name="id_administrasi" required="" value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("m"); ?>">
+	<input type="hidden" name="nominal" required="" value="300000">
+	<input type="hidden" name="tgl" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')" value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("y/m/d"); ?>">
+	<input type="hidden" name="status" required="" value="lunas">
+	<input type="hidden" name="keterangan" required="" value="">
+
+	<div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Id Santri</label>
+      <div class="input-group col-sm-10">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-table"></i> 
+          </div>
+        </div>
+        <select name="id_santri" class="form-control select2" required="">
+        	<option>--Pilih Santri--</option>
+        	@foreach($list_santri as $d)
+        	<option value="{{$d->id_santri}}">{{$d->id_santri}}-{{$d->nama_santri}}</option>
+        	@endforeach
+        </select>
+      </div>          
+    </div>
+    <div class="form-group row">
+    </div>
+
+   
+    <div class="text-right">
+      <button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+      
+		</form>
+
+	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 mt-3">
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title">Data Uang Makan</div>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fa fa-minus"></i></button>
+					</div>
+					<!-- <a href="{{--url('admin/presensi/create')--}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a> -->
+				</div>
+				<div class="card-body">
+					<table class="table table-datatable">
 							<thead>
 								<th>No</th>
 								<!-- <th>Aksi</th> -->
+								<th>Foto</th>
 								<th>Nama santri</th>
+								<th>Nama Wali Santri</th>
 								<th>Jan</th>
 								<th>Feb</th>
 								<th>Mar</th>
@@ -34,7 +93,9 @@
 							@foreach($list_uangmakan as $uangmakan)
 							<tr>
 								<td>{{$loop->iteration}}</td>
-								<td><a href="{{url('admin/uangmakan', $uangmakan->iduangmakan)}}">{{$uangmakan->nama_santri}}</a></td>
+								<td><img src="{{url("public/$uangmakan->foto")}}"></td>
+								<td>{{$uangmakan->nama_santri}}</a></td>
+								<td>{{$uangmakan->nm_wsantri}}</a></td>
 								<td>
 									@if($uangmakan->jan == '300000')
 									<a href="{{url('admin/uangmakan/kwitansiThermo',$uangmakan->idu)}}"  target="_blank" class="badge badge-success">Rp.300.000</a>

@@ -62,7 +62,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-user-graduate"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+             
             </div>
           </div>
           <!-- ./col -->
@@ -77,7 +77,7 @@
               <div class="icon">
                <i class="nav-icon fas fa-book"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              
             </div>
           </div>
           <!-- ./col -->
@@ -92,7 +92,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              
             </div>
           </div>
           <!-- ./col -->
@@ -107,7 +107,7 @@
               <div class="icon">
                <i class="nav-icon fas fa-hand-holding-usd"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              
             </div>
           </div>
           <!-- ./col -->

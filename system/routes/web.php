@@ -10,23 +10,26 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LaporanController;
 
 Route::get('/', function () {
-    return view('login');
+    return view('home');
 });
 Route::get('base', [HomeController::class, 'showBaseAdmin']);
+Route::get('home', [HomeController::class, 'showHome']);
+Route::get('visimisi', [HomeController::class, 'showVisimisi']);
+Route::get('infopondok', [HomeController::class, 'showInfopondok']);
 
 // Route::get('dashboard', [AdminController::class, 'showDashboard']);
-Route::get('home', [HomeController::class, 'showHomeAdmin']);
+// Route::get('home', [HomeController::class, 'showHomeAdmin']);
 
 Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('dashboard', [HomeController::class, 'dashboardAdmin']);
-	Route::get('profil', [HomeController::class, 'profilAdmin']);
-	Route::get('home', [HomeController::class, 'homeAdmin']);
+	// Route::get('profil', [HomeController::class, 'profilAdmin']);
+	// Route::get('home', [HomeController::class, 'homeAdmin']);
 	Route::get('profile', [HomeController::class, 'profileAdmin']);
 
     Route::get('santri/create', [SantriController::class, 'create']);
 	Route::get('santri/{gender}', [SantriController::class, 'indexAdmin']);
     Route::post('santri', [SantriController::class, 'store']);
-    Route::get('santri/show/{santri}', [SantriController::class, 'showAdmin']);
+    Route::get('santri/show/{santri}', [SantriController::class, 'show']);
     Route::get('santri/{santri}/edit', [SantriController::class, 'edit']);
     Route::put('santri/{santri}', [SantriController::class, 'update']);
     Route::delete('santri/{santri}', [SantriController::class, 'destroy']);
@@ -42,18 +45,17 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('uangmakan', [UangmakanController::class, 'indexAdmin']);
     Route::get('uangmakan/create', [UangmakanController::class, 'create']);
     Route::post('uangmakan', [UangmakanController::class, 'store']);
-    Route::get('uangmakan/{uangmakan}', [UangmakanController::class, 'showAdmin']);
+    Route::get('uangmakan/{uangmakan}', [UangmakanController::class, 'show']);
     Route::get('uangmakan/{uangmakan}/edit', [UangmakanController::class, 'edit']);
     Route::put('uangmakan/{uangmakan}', [UangmakanController::class, 'update']);
     Route::delete('uangmakan/{uangmakan}', [UangmakanController::class, 'destroy']);
 
 	Route::get('uangmakan/kwitansiThermo/{uangmakan}', [UangmakanController::class, 'kwitansiThermo']);
-	Route::get('uangmakan/kwitansiTinta/{uangmakan}', [UangmakanController::class, 'kwitansiTinta']);
 	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananAdmin']);
 
 	//laporan
-	Route::get('laporanCari',[LaporanController::class,'cari']);
-	Route::get('laporan',[LaporanController::class,'index']);
+	Route::get('laporanCari',[LaporanController::class,'cariAdmin']);
+	Route::get('laporan',[LaporanController::class,'indexAdmin']);
 			
 	Route::resource('user', UserController::class)->middleware('auth');
  });
@@ -61,30 +63,34 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 Route::get('base', [HomeController::class, 'showBaseWalisantri']);
 
 // Route::get('dashboard', [WalisantriController::class, 'showDashboard']);
-Route::get('home', [HomeController::class, 'showHomeWalisantri']);
+// Route::get('home', [HomeController::class, 'showHomeWalisantri']);
 
 Route::prefix('walisantri')->middleware('auth')->group(function() {
 	Route::get('dashboard', [HomeController::class, 'dashboardWalisantri']);
-	Route::get('profil', [HomeController::class, 'profilWalisantri']);
-	Route::get('home', [HomeController::class, 'homeWalisantri']);
+	// Route::get('profil', [HomeController::class, 'profilWalisantri']);
+	// Route::get('home', [HomeController::class, 'homeWalisantri']);
 	Route::get('santri', [SantriController::class, 'indexWalisantri']);
-	Route::get('santri/{santri}', [SantriController::class, 'showWalisantri']);
 	Route::get('presensi', [PresensiController::class, 'indexWalisantri']);
 	Route::get('uangmakan', [UangmakanController::class, 'indexWalisantri']);
+
+	Route::get('pengaturan', [PengaturanController::class, 'index']);
+    Route::get('pengaturan/{pengaturan}/edit', [PengaturanController::class, 'edit']);
+    Route::put('pengaturan/{pengaturan}', [PengaturanController::class, 'update']);
  });
 
 Route::get('base', [HomeController::class, 'showBasePengasuh']);
 
 // Route::get('dashboard', [PengasuhController::class, 'showDashboard']);
-Route::get('home', [HomeController::class, 'showHomePengasuh']);
+// Route::get('home', [HomeController::class, 'showHomePengasuh']);
 
 Route::prefix('pengasuh')->middleware('auth')->group(function() {
 	Route::get('dashboard', [HomeController::class, 'dashboardPengasuh']);
-	Route::get('profil', [HomeController::class, 'profilPengasuh']);
-	Route::get('home', [HomeController::class, 'homePengasuh']);
-	Route::get('uangmakan', [UangmakanController::class, 'indexPengasuh']);
-	Route::get('uangmakan/{uangmakan}', [UangmakanController::class, 'showPengasuh']);
+	// Route::get('profil', [HomeController::class, 'profilPengasuh']);
+	// Route::get('home', [HomeController::class, 'homePengasuh']);
+	
 	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananPengasuh']);
+	Route::get('laporanCari',[LaporanController::class,'cariPengasuh']);
+	Route::get('laporan',[LaporanController::class,'indexPengasuh']);
 	
  });
 

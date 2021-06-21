@@ -5,7 +5,7 @@
 		<div class="col-md-12 mt-3">
 			<div class="card">
 				<div class="card-header">
-					<div class="card-title">Tambah Absensi</div>
+					<div class="card-title">Tambah Presensi</div>
 					<div class="card-tools">
 						<button type="button" class="btn btn-tool" data-card-widget="collapse">
 							<i class="fa fa-minus"></i>
@@ -43,8 +43,7 @@
    
     <div class="text-right">
       <button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-      <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
-      </button>
+      
 		</form>
 
 	</div>
@@ -63,7 +62,7 @@
 				<div class="card-header">
 					<div class="card-title">Data Presensi</div>
 					<div class="card-tools">
-						<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fa fa-plus"></i></button>
+						<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fa fa-minus"></i></button>
 					</div>
 					<!-- <a href="{{--url('admin/presensi/create')--}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a> -->
 				</div>
@@ -72,7 +71,9 @@
 							<thead>
 									<th>No</th>
 									<!-- <th>Aksi</th -->
+									<th>Foto</th>	
 									<th>Nama Santri</th>
+									<th>Nama Wali Santri</th>
 									<th>Jan</th>
 									<th>Feb</th>
 									<th>Mar</th>
@@ -97,7 +98,9 @@
 											@include('admin.template.utils.delete', ['url' => url('admin/presensi', $presensi->idpresensi)])
 											</div>
 										</td> -->
-										<td><a href="{{url('admin/presensi', $presensi->idpresensi)}}">{{$presensi->nama_santri}}</a></td>
+										<td><img src="{{url("public/$presensi->foto")}}"></td>
+										<td>{{$presensi->nama_santri}}</a></td>
+										<td>{{$presensi->nm_wsantri}}</a></td>
 										<!-- jan -->
 										<td>
 											@if($presensi->jan == 'hadir')

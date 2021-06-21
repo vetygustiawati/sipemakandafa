@@ -3,17 +3,23 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-16 mt-5">
+		<div class="col-md-12 mt-3">
 			<div class="card">
 				<div class="card-header">
-					<H4>Data Presensi</H4>
-					
+					<div class="card-title">Data Presensi</div>
+					<div class="card-tools">
+						
+					</div>
+					<!-- <a href="{{--url('admin/presensi/create')--}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a> -->
 				</div>
 				<div class="card-body">
 					<table class="table table-datatable">
 							<thead>
 									<th>No</th>
+									<!-- <th>Aksi</th -->
+									<th>Foto</th>	
 									<th>Nama Santri</th>
+									<th>Nama Wali Santri</th>
 									<th>Jan</th>
 									<th>Feb</th>
 									<th>Mar</th>
@@ -31,14 +37,23 @@
 									@foreach($list_presensi as $presensi)
 									<tr>
 										<td>{{$loop->iteration}}</td>
-										
-										<td>{{$presensi->nama_santri}}</td>
+										<!-- <td>
+											<div class="btn-group">
+											<a href="{{url('admin/presensi', $presensi->idpresensi)}}"class="btn btn-dark"> <i class="fa fa-info"></i></a>
+											<a href="{{url('admin/presensi', $presensi->idpresensi)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+											@include('admin.template.utils.delete', ['url' => url('admin/presensi', $presensi->idpresensi)])
+											</div>
+										</td> -->
+										<td><img src="{{url("public/$presensi->foto")}}"></td>
+										<td>{{$presensi->nama_santri}}</a></td>
+										<td>{{$presensi->nm_wsantri}}</a></td>
 										<!-- jan -->
 										<td>
 											@if($presensi->jan == 'hadir')
 											<button class="btn btn-success"><i class="fa fa-check"></i></button>
 											@elseif($presensi->jan == '0')
 											<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+											
 											@endif
 										</td>							<td><!-- feb -->
 								@if($presensi->feb == 'hadir')
@@ -56,7 +71,13 @@
 								@endif
 							</td>
 							<td><!-- apr -->
-								<h6>Ramadhan</h6>
+								
+							<!-- 	<h6>Ramadhan</h6> -->
+								@if($presensi->apr == 'hadir')
+									<button class="btn btn-success"><i class="fa fa-check"></i></button>
+								@elseif($presensi->apr == '0')
+									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
+								@endif
 							</td>
 							<td><!-- mei -->
 								@if($presensi->mei == 'hadir')

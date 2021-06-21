@@ -6,7 +6,7 @@ use App\Models\Santri;
 class UserController extends Controller{
 	function index(){
 		$data['list_user'] = User::all();
-
+		$data['santri'] = Santri::all();
 		return view('admin.user.index', $data);
 	}
 	function create(){
@@ -15,8 +15,6 @@ class UserController extends Controller{
 	}
 	function store(){
 		$user = new User;
-		$user->id_user = request('id_user');
-		$user->id_santri = request('id_santri');
 		$user->nama = request ('nama');
 		$user->username = request ('username');
 		$user->email = request ('email');
@@ -33,12 +31,11 @@ class UserController extends Controller{
 	}
 	function edit(User $user){
 		$data['user'] = $user;
+		$data['santri'] = Santri::all();
 		return view('admin.user.edit', $data);
 	}
 	function update(User $user){
-	
-		$user->id_user = request ('id_user');
-		$user->id_santri = request('id_santri');
+
 		$user->nama = request ('nama');
 		$user->username = request ('username');
 		$user->email = request ('email');

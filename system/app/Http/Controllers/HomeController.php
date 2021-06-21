@@ -19,15 +19,15 @@ class HomeController extends Controller{
 	function showBaseWalisantri(){
 		return view('walisantri.template.base');
 	}
-	function showHomeAdmin(){
-		return view('admin.home');
-	}
-	function showHomePengasuh(){
-		return view('pengasuh.home');
-	}
-	function showHomeWalisantri(){
-		return view('walisantri.home');
-	}
+	// function showHomeAdmin(){
+	// 	return view('admin.home');
+	// }
+	// function showHomePengasuh(){
+	// 	return view('pengasuh.home');
+	// }
+	// function showHomeWalisantri(){
+	// 	return view('walisantri.home');
+	// }
 	function dashboardAdmin(){
 		$data['total_santri'] = Santri::all()->count();
 		$data['kehadiran'] = Presensi::all()->count();
@@ -53,63 +53,71 @@ class HomeController extends Controller{
 		return view('walisantri.dashboard', $data);
 	}
 	
-	function profilAdmin(){
-		return view('admin/profil');
-	}
-	function profilPengasuh(){
-		return view('pengasuh/profil');
-	}
-	function profilWalisantri(){
-		return view('walisantri/profil');
-	}
-	function homeAdmin(){
-		return view('admin/home');
-	}
-	function homePengasuh(){
-		return view('pengasuh/home');
-	}
-	function homeWalisantri(){
-		return view('walisantri/home');
-	}
+	// function profilAdmin(){
+	// 	return view('admin/profil');
+	// }
+	// function profilPengasuh(){
+	// 	return view('pengasuh/profil');
+	// }
+	// function profilWalisantri(){
+	// 	return view('walisantri/profil');
+	// }
+	// function homeAdmin(){
+	// 	return view('admin/home');
+	// }
+	// function homePengasuh(){
+	// 	return view('pengasuh/home');
+	// }
+	// function homeWalisantri(){
+	// 	return view('walisantri/home');
+	// }
 	function profileAdmin(){
 		return view('admin/profile');
 	}
-	function showProfilAdmin(){
-		return view('admin.profil');
+	// function showProfilAdmin(){
+	// 	return view('admin.profil');
+	// }
+	// function showProfilPengasuh(){
+	// 	return view('pengasuh.profil');
+	// }
+	// function showProfilWalisantri(){
+	// 	return view('walisantri.profil');
+	// }
+	// function showSantriAdmin(){
+	// 	return view('admin.santri');
+	// }
+	// function showSantriWalisantri(){
+	// 	return view('walisantri.santri');
+	// }
+	// function showPresensiAdmin(){
+	// 	return view('admin.presensi');
+	// }
+	// function showPresensiWalisantri(){
+	// 	return view('walisantri.presensi');
+	// }
+	// function showUangmakanAdmin(){
+	// 	return view('admin.uangmakan');
+	// }
+	// function showUangmakanPengasuh(){
+	// 	return view('pengasuh.uangmakan');
+	// }
+	// function showUangmakanWalisantri(){
+	// 	return view('walisantri.uangmakan');
+	// }
+	// function showUser(){
+	// 	return view('admin.user');
+	// }
+	// function showProfile(){
+	// 	return view('admin.profile');
+	// }
+	function showHome(){
+		return view('home');
 	}
-	function showProfilPengasuh(){
-		return view('pengasuh.profil');
+	function showVisimisi(){
+		return view('visimisi');
 	}
-	function showProfilWalisantri(){
-		return view('walisantri.profil');
+	function showInfopondok(){
+		return view('infopondok');
 	}
-	function showSantriAdmin(){
-		return view('admin.santri');
-	}
-	function showSantriWalisantri(){
-		return view('walisantri.santri');
-	}
-	function showPresensiAdmin(){
-		return view('admin.presensi');
-	}
-	function showPresensiWalisantri(){
-		return view('walisantri.presensi');
-	}
-	function showUangmakanAdmin(){
-		return view('admin.uangmakan');
-	}
-	function showUangmakanPengasuh(){
-		return view('pengasuh.uangmakan');
-	}
-	function showUangmakanWalisantri(){
-		return view('walisantri.uangmakan');
-	}
-	function showUser(){
-		return view('admin.user');
-	}
-	function showProfile(){
-		return view('admin.profile');
-	}
-	
 	
 }

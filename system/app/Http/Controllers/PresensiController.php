@@ -8,7 +8,8 @@ class PresensiController extends Controller{
 	function indexAdmin(){
 		// $data['list_presensi'] = Presensi::all();
 	$data['list_presensi'] =  DB::table('presensi')
-	        ->select('santri.id','santri.id_santri','santri.nama_santri', 'tgl_presensi', 'status', 'keterangan', 'presensi.id as idpresensi',
+	        ->select('santri.id','santri.id_santri','santri.nama_santri','santri.nm_wsantri', 
+	        'santri.foto','tgl_presensi', 'status', 'keterangan', 'presensi.id as idpresensi',
 	        	DB::raw("max(case when bln='01' THEN status else 0 end )as jan"),
 	        	DB::raw("max(case when bln='02' THEN status else 0 end )as feb"),
 	        	DB::raw("max(case when bln='03' THEN status else 0 end )as mar"),
@@ -35,8 +36,9 @@ class PresensiController extends Controller{
 		$id_santri = request()->user()->id_santri;
 		// dd($id_santri);
 
-		$data['list_presensi'] = DB::table('presensi')
-	      ->select('santri.id','santri.id_santri','santri.nama_santri', 'tgl_presensi', 'status', 'keterangan', 'presensi.id as idpresensi',
+		$data['list_presensi'] =  DB::table('presensi')
+	        ->select('santri.id','santri.id_santri','santri.nama_santri','santri.nm_wsantri', 
+	        'santri.foto','tgl_presensi', 'status', 'keterangan', 'presensi.id as idpresensi',
 	        	DB::raw("max(case when bln='01' THEN status else 0 end )as jan"),
 	        	DB::raw("max(case when bln='02' THEN status else 0 end )as feb"),
 	        	DB::raw("max(case when bln='03' THEN status else 0 end )as mar"),
@@ -57,6 +59,7 @@ class PresensiController extends Controller{
 	        ->get();
 
 	        // dd(request()->all());
+
 		return view('walisantri.presensi.index', $data);
 	}
 	function create(){

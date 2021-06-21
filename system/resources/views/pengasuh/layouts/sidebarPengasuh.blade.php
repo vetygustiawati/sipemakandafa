@@ -42,16 +42,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('pengasuh/profil')}}" class="nav-link {{checkRouteActive('pengasuh/profil')}}" style="background: #EDC7B7; color: black; !important">
-              <i class="nav-icon fas fa-mosque"></i>
-              <p>
-                Profil
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{url('pengasuh/uangmakan')}}" class="nav-link {{checkRouteActive('pengasuh/uangmakan')}}" style="background: #EDC7B7; color: black; !important">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{url('pengasuh/laporan')}}" class="nav-link {{checkRouteActive('pengasuh/laporan')}}" style="background: #EDC7B7; color: black; !important">
+            <i class="nav-icon fas fa-layer-group"></i>
               <p>
                 Laporan
                 

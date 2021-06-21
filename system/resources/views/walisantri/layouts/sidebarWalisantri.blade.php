@@ -21,7 +21,7 @@
         <div class="info">
           <a href="#" class="d-block">
             @if(Auth::check())
-            {{request()->user()->nama}}
+            {{request()->user()->username}}
             @else
             Silahkan Login
             @endif
@@ -71,8 +71,8 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="{{url('walisantri/profil')}}" class="nav-link {{checkRouteActive('walisantri/profil')}}" style="background: #EDC7B7; color: black; !important">
-              <i class="nav-icon fas fa-mosque"></i>
+            <a href="{{url('walisantri/pengaturan')}}" class="nav-link {{checkRouteActive('walisantri/pengaturan')}}" style="background: #EDC7B7; color: black; !important">
+              <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Pengaturan
               </p>

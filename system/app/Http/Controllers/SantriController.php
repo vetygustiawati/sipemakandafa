@@ -32,6 +32,7 @@ class SantriController extends Controller{
 		return view('admin.santri.create');
 	}
 	function store(){
+		
 		$santri = new Santri;
 		$santri->id_santri = request ('id_santri');
 		$santri->nama_santri = request ('nama_santri');
@@ -42,18 +43,17 @@ class SantriController extends Controller{
 		$santri->nm_wsantri = request ('nm_wsantri');
 		$santri->no_hp = request ('no_hp');
 		$santri->save();
+
+		$santri->handleUploadFoto();
 			
 		return redirect('admin/santri/putra')->with('success','Data Berhasil Ditambahkan');
 		
 	}
-	function showAdmin(Santri $santri){
+	function show(Santri $santri){
 		$data['santri'] = $santri;
 		return view('admin.santri.show', $data);
 	}
-	function showWalisantri(Santri $santri){
-		$data['santri'] = $santri;
-		return view('walisantri.santri.show', $data);
-	}
+	
 	function edit(Santri $santri){
 		$data['santri'] = $santri;
 		return view('admin.santri.edit', $data);
@@ -62,6 +62,7 @@ class SantriController extends Controller{
 	
 		$santri->id_santri = request ('id_santri');
 		$santri->nama_santri = request ('nama_santri');
+		$santri->foto = request ('foto');
 		$santri->tpt_lahir = request ('tpt_lahir');
 		$santri->tgl_lahir = request ('tgl_lahir');
 		$santri->jk = request ('jk');
@@ -70,12 +71,14 @@ class SantriController extends Controller{
 		$santri->no_hp = request ('no_hp');
 		$santri->save();
 
+		$santri->handleUploadFoto();
+
 		return redirect('admin/santri/putra')->with('success','Data Berhasil Diedit');
 	}
 	function destroy(Santri $santri){
 		$santri->delete();
 
-		return redirect('admin/santri')->with('danger','Data Berhasil Dihapus');
+		return redirect('admin/santri/putra')->with('danger','Data Berhasil Dihapus');
 
 	}
 }
