@@ -20,7 +20,7 @@
 				               <div class="input-group-prepend">
 				               	<span class="input-group-text"><i class="fas fa-calendar"></i></span>
 				               </div>
-							<input type="date" name="dari" id="" class="form-control">
+							<input type="date" name="dari" value="{{$dari ?? ''}}" id="" class="form-control">
 		               	</div>
 					</div>
 					<div class="col-sm-12">
@@ -29,7 +29,7 @@
 				               <div class="input-group-prepend">
 				               	<span class="input-group-text"><i class="fas fa-calendar"></i></span>
 				               </div>
-							<input type="date" name="sampai" id="" class="form-control">
+							<input type="date" name="sampai" value="{{$sampai ?? ''}}" id="" class="form-control">
 		               	</div>
 					</div>
 					<button type="input" class="btn btn-primary float-right">Cari</button>
@@ -78,7 +78,7 @@
 			                @foreach ($laporan_presensi as $d)
 							<tr>
 								<th>{{$loop->iteration}}</th>
-								<td>{{$d->nama_santri}}</a></td>
+								<td>{{$d->id_santri}}</a></td>
 								<td>{{$d->nm_wsantri}}</a></td>
 										<!-- jan -->
 										<td>
