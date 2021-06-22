@@ -15,14 +15,16 @@ class UserController extends Controller{
 	}
 	function store(){
 		$user = new User;
-		$user->nama = request ('nama');
+		$user->id_santri = request ('id_santri');
 		$user->username = request ('username');
 		$user->email = request ('email');
-		$user->level = request ('level');
+		$user->nama = request ('nama');
 		$user->password = bcrypt(request ('password'));
+		$user->level = request ('level');
+		// dd(request()->all());
 		$user->save();
 			
-			return redirect('admin/user')->with('success','Data Berhasil Ditambahkan');
+		return redirect('admin/user')->with('success','Data Berhasil Ditambahkan');
 		
 	}
 	function show(User $user){

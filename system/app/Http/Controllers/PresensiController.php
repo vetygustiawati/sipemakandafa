@@ -33,7 +33,7 @@ class PresensiController extends Controller{
 	}
 	function indexWalisantri(){
 	// 	// $data['list_presensi'] = Presensi::all();
-		$id_santri = request()->user()->id_santri;
+		$id_santri = request()->user()->id;
 		// dd($id_santri);
 
 		$data['list_presensi'] =  DB::table('presensi')
