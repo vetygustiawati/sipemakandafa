@@ -1,4 +1,4 @@
-@extends('walisantri.template.base')
+@extends('admin.template.base')
 
 @section('content')
 	<div class = "container">
@@ -14,7 +14,7 @@
           </div>
 
           <div class="card-body">
-					<form action="{{url('admin/user', $user->id)}}" method="post">
+					<form action="{{url('walisantri/user', $user->id)}}" method="post">
 						@csrf
 						@method("PUT")
        

@@ -4,10 +4,22 @@ use App\Models\User;
 use App\Models\Santri;
 
 class UserController extends Controller{
-	function index(){
+	function indexAdmin(){
 		$data['list_user'] = User::all();
 		$data['santri'] = Santri::all();
 		return view('admin.user.index', $data);
+	}
+	function indexWalisantri(){
+		$id_santri = request()->user()->id;
+		$data['list_user'] = User::all();
+		$data['santri'] = Santri::all();
+		return view('walisantri.user.index', $data);
+	}
+	function indexPengasuh(){
+		$id_santri = request()->user()->id;
+		$data['list_user'] = User::all();
+		$data['santri'] = Santri::all();
+		return view('pengasuh.user.index', $data);
 	}
 	function create(){
 		$data['santri'] = Santri::all();
@@ -31,12 +43,22 @@ class UserController extends Controller{
 		$data['user'] = $user;
 		return view('admin.user.show', $data);
 	}
-	function edit(User $user){
+	function editAdmin(User $user){
 		$data['user'] = $user;
 		$data['santri'] = Santri::all();
 		return view('admin.user.edit', $data);
 	}
-	function update(User $user){
+	function editWaliSantri(User $user){
+		$data['user'] = $user;
+		$data['santri'] = Santri::all();
+		return view('walisantri.user.edit', $data);
+	}
+	function editPengasuh(User $user){
+		$data['user'] = $user;
+		$data['santri'] = Santri::all();
+		return view('pengasuh.user.edit', $data);
+	}
+	function updateAdmin(User $user){
 
 		$user->nama = request ('nama');
 		$user->username = request ('username');
@@ -45,6 +67,26 @@ class UserController extends Controller{
 		if(request('password')) $user->password = bcrypt(request ('password'));
 		$user->save();
 		return redirect('admin/user')->with('success','Data Berhasil Diedit');
+	}
+	function updateWalisantri(User $user){
+
+		$user->nama = request ('nama');
+		$user->username = request ('username');
+		$user->email = request ('email');
+		$user->level = request ('level');
+		if(request('password')) $user->password = bcrypt(request ('password'));
+		$user->save();
+		return redirect('walisantri/user')->with('success','Data Berhasil Diedit');
+	}
+	function updatePengasuh(User $user){
+
+		$user->nama = request ('nama');
+		$user->username = request ('username');
+		$user->email = request ('email');
+		$user->level = request ('level');
+		if(request('password')) $user->password = bcrypt(request ('password'));
+		$user->save();
+		return redirect('pengasuh/user')->with('success','Data Berhasil Diedit');
 	}
 	function destroy(User $user){
 		$user->delete();

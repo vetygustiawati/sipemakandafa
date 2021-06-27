@@ -71,7 +71,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="{{url('walisantri/pengaturan')}}" class="nav-link {{checkRouteActive('walisantri/pengaturan')}}" style="background: #EDC7B7; color: black; !important">
+            <a href="{{url('walisantri/user')}}" class="nav-link {{checkRouteActive('walisantri/user')}}" style="background: #EDC7B7; color: black; !important">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Pengaturan

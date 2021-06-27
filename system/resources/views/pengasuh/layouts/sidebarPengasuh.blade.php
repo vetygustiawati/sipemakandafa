@@ -50,6 +50,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{url('pengasuh/user')}}" class="nav-link {{checkRouteActive('pengasuh/user')}}" style="background: #EDC7B7; color: black; !important">
+              <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Pengaturan
+              </p>
+            </a>
+          </li>
           
           
           

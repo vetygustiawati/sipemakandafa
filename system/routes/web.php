@@ -53,11 +53,19 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('uangmakan/kwitansiThermo/{uangmakan}', [UangmakanController::class, 'kwitansiThermo']);
 	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananAdmin']);
 
+	Route::get('user', [UserController::class, 'indexAdmin']);
+    Route::get('user/create', [UserController::class, 'create']);
+    Route::post('user', [UserController::class, 'store']);
+    Route::get('user/{user}', [UserController::class, 'show']);
+    Route::get('user/{user}/edit', [UserController::class, 'editAdmin']);
+    Route::put('user/{user}', [UserController::class, 'updateAdmin']);
+    Route::delete('user/{user}', [UserController::class, 'destroy']);
+
 	//laporan
 	Route::get('laporanCari',[LaporanController::class,'cariAdmin']);
 	Route::get('laporan',[LaporanController::class,'indexAdmin']);
 			
-	Route::resource('user', UserController::class)->middleware('auth');
+	// Route::resource('user', UserController::class)->middleware('auth');
  });
 
 Route::get('base', [HomeController::class, 'showBaseWalisantri']);
@@ -73,9 +81,9 @@ Route::prefix('walisantri')->middleware('auth')->group(function() {
 	Route::get('presensi', [PresensiController::class, 'indexWalisantri']);
 	Route::get('uangmakan', [UangmakanController::class, 'indexWalisantri']);
 
-	Route::get('pengaturan', [PengaturanController::class, 'index']);
-    Route::get('pengaturan/{pengaturan}/edit', [PengaturanController::class, 'edit']);
-    Route::put('pengaturan/{pengaturan}', [PengaturanController::class, 'update']);
+	Route::get('user', [UserController::class, 'indexWalisantri']);
+    Route::get('user/{user}/edit', [UserController::class, 'editWalisantri']);
+    Route::put('user/{user}', [UserController::class, 'updateWalisantri']);
  });
 
 Route::get('base', [HomeController::class, 'showBasePengasuh']);
@@ -91,6 +99,10 @@ Route::prefix('pengasuh')->middleware('auth')->group(function() {
 	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananPengasuh']);
 	Route::get('laporanCari',[LaporanController::class,'cariPengasuh']);
 	Route::get('laporan',[LaporanController::class,'indexPengasuh']);
+
+	Route::get('user', [UserController::class, 'indexPengasuh']);
+    Route::get('user/{user}/edit', [UserController::class, 'editPengasuh']);
+    Route::put('user/{user}', [UserController::class, 'updatePengasuh']);
 	
  });
 

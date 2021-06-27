@@ -48,6 +48,19 @@
 
     <!-- Main content -->
     <section class="content">
+      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-light pt-2" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="{{url('/profil')}}" style="color: black">Selamat Datang Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          
+        </div>
+      </div>
+    </nav>
+    <br>
+
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
@@ -100,7 +113,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{$uang_makan}}</h3>
+                <h3>Rp. {{$uang_makan}}</h3>
 
                 <p>Total Uang Makan</p>
               </div>
