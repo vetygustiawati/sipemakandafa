@@ -70,7 +70,7 @@ div.WordSection1
   padding:0cm 5.4pt 0cm 5.4pt;height:22.7pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b><span style='font-size:7.0pt;
-  font-family:"Arial","sans-serif"'>KWITANSI PEMBAYARAN ADMINISTRASI</span></b></p>
+  font-family:"Arial","sans-serif"'>KWITANSI PEMBAYARAN UANG MAKAN</span></b></p>
   </td>
  </tr>
  <tr style='height:11.35pt'>

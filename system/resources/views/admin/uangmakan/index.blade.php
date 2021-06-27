@@ -88,6 +88,7 @@
 								<th>Okt</th>
 								<th>Nov</th>
 								<th>Des</th>
+								<th>Aksi</th>
 							</thead>
 							<tbody>
 							@foreach($list_uangmakan as $uangmakan)
@@ -182,6 +183,12 @@
 										<a href="#" class="badge badge-danger">Rp.0</a>
 									@endif
 								</td>
+								<td>
+											<div class="btn-group">
+											
+											@include('admin.template.utils.delete', ['url' => url('admin/uangmakan', $uangmakan->iduangmakan)])
+											</div>
+										</td>
 								</tr>
 									@endforeach
 							</tbody>

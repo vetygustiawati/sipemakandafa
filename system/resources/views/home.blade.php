@@ -47,7 +47,6 @@
             <li class="nav-item"><a href="{{url('/infopondok')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-bell mr-2"></i> Informasi Pondok</a></li>
           </ul>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="https://www.facebook.com/ponpesdarulfadhilah" class="nav-link icon d-flex align-items-center"><i class="ion-logo-facebook"></i></a></li>
             <li class="nav-item"><a href="https://www.instagram.com/ponpesdarulfadhilah" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i></a></li>
           </ul>
         </div>
@@ -62,7 +61,7 @@
           <div class="col-md-8 text-center">
             <div class="text">
               <h1>SELAMAT DATANG</h1>
-              <h4 class="mb-5">di Sistem Informasi Pembayaran Uang Makan</h4>
+              <h4 class="mb-5">Di Sistem Informasi Pembayaran Uang Makan</h4>
               <p><a href="{{url('/login')}}" class="btn btn-primary px-4 py-3"><i class="fa fa-sign-in mr-2"></i>Login</a></p>
             </div>
           </div>

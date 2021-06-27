@@ -84,7 +84,8 @@
               <div class="text-light p-5 pb-2">
                 <div class="mb-5 pb-3">
                   <h3>Sistem Informasi Pembayaran</h3>
-                  <h5 class="font-weight-normal text-muted-transparent">Uang Makan Santri</h5>
+                  <h4 class="font-weight-normal text-muted-transparent">Uang Makan Santri</h4>
+                  <h5 class="font-weight-normal text-muted-transparent">Pondok Pesantren Darul Fadhilah</h5>
                 </div>
                 <!-- Photo by <a class="text-light bb" target="_blank" href="https://unsplash.com/photos/a8lTjWJJgLA">Justin Kauffman</a> on <a class="text-light bb" target="_blank" href="https://unsplash.com">Unsplash</a> -->
               </div>

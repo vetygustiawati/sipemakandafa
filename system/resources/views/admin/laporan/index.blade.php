@@ -78,7 +78,7 @@
 			                @foreach ($laporan_presensi as $d)
 							<tr>
 								<th>{{$loop->iteration}}</th>
-								<td>{{$d->id_santri}}</a></td>
+								<td>{{$d->nama_santri}}</a></td>
 								<td>{{$d->nm_wsantri}}</a></td>
 										<!-- jan -->
 										<td>

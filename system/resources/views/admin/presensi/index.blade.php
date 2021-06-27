@@ -86,6 +86,7 @@
 									<th>Okt</th>
 									<th>Nov</th>
 									<th>Des</th>
+									<th>Aksi</th>
 							</thead>
 								<tbody>
 									@foreach($list_presensi as $presensi)
@@ -189,6 +190,12 @@
 									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
 								@endif
 							</td>
+							<td>
+											<div class="btn-group">
+											
+											@include('admin.template.utils.delete', ['url' => url('admin/presensi', $presensi->idpresensi)])
+											</div>
+										</td>
 									</tr>
 									@endforeach
 								</tbody>
