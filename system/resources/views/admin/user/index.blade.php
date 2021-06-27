@@ -127,7 +127,6 @@
 					<table class="table table-datatable">
 							<thead>
 									<th>No</th>
-									<th>Nama</th>
 									<th>Username</th>
 									<th>Level</th>
 									
@@ -143,8 +142,7 @@
 											@include('admin.template.utils.delete', ['url' => url('admin/user', $user->id)])
 											</div>
 										</td> -->
-                    <td><a href="{{url('admin/user', $user->id)}}">{{$user->nama}}</a></td>
-										<td>{{$user->username}}</td>
+                    <td><a href="{{url('admin/user', $user->id)}}">{{$user->username}}</a></td>
 										<td>{{$user->level}}</td>
 										
 									</tr>

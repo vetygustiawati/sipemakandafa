@@ -106,14 +106,15 @@
     <title>SIPEMAKAN</title>
 </head>
 <body>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile">
+            @foreach($list_santri as $santri)
             <form method="post">
-<div class="row">
+                <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
                            <img src="{{url("public/$santri->foto")}}">
@@ -139,10 +140,6 @@
                         </div>
                     </div>
 
-                    <div class="col-md-2">
-                        <a href="{{url('admin/santri', $santri->id)}}/edit" class="btn btn-primary btn-sm my-1 mr-sm-1 btn-block"><i class="nav-icon fas fa-pencil-alt"></i> Edit</a>
-                                            @include('admin.template.utils.delete', ['url' => url('admin/santri', $santri->id)])
-                    </div>
                 </div>
 
                 <div class="row">
@@ -227,7 +224,8 @@
                         </div>
                     </div>
                 </div>
-            </form>           
+            </form>  
+            @endforeach
         </div>
 </body>
 </html>

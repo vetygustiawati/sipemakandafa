@@ -27,24 +27,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5cc76ac70c.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" type="text/css" href="{{url('public')}}/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="{{'public'}}/web/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="{{'public'}}/web/css/animate.css">
-    
-    <link rel="stylesheet" href="{{'public'}}/web/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{'public'}}/web/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="{{'public'}}/web/css/magnific-popup.css">
-
-    <link rel="stylesheet" href="{{'public'}}/web/css/aos.css">
-
-    <link rel="stylesheet" href="{{'public'}}/web/css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="{{'public'}}/web/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="{{'public'}}/web/css/nouislider.css">
-
-    
-    <link rel="stylesheet" href="{{'public'}}/web/css/flaticon.css">
-    <link rel="stylesheet" href="{{'public'}}/web/css/icomoon.css">
-    <link rel="stylesheet" href="{{'public'}}/web/css/style.css">
 
 <!-- Select2 -->
   <link rel="stylesheet" href="{{ url('public/plugins/select2/css/select2.min.css')}}">
@@ -104,22 +86,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{url('public')}}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
 <script src="{{url('public')}}/dist/js/adminlte.min.js"></script>
-
- <script src="{{'public'}}/web/js/jquery.min.js"></script>
-  <script src="{{'public'}}/web/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="{{'public'}}/web/js/popper.min.js"></script>
-  <script src="{{'public'}}/web/js/bootstrap.min.js"></script>
-  <script src="{{'public'}}/web/js/jquery.easing.1.3.js"></script>
-  <script src="{{'public'}}/web/js/jquery.waypoints.min.js"></script>
-  <script src="{{'public'}}/web/js/jquery.stellar.min.js"></script>
-  <script src="{{'public'}}/web/js/owl.carousel.min.js"></script>
-  <script src="{{'public'}}/web/js/jquery.magnific-popup.min.js"></script>
-  <script src="{{'public'}}/web/js/aos.js"></script>
-
-  <script src="{{'public'}}/web/js/nouislider.min.js"></script>
-  <script src="{{'public'}}/web/js/moment-with-locales.min.js"></script>
-  <script src="{{'public'}}/web/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="{{'public'}}/web/js/main.js"></script>
 
 <!-- Select2 -->
 <script src="{{ url('public/plugins/select2/js/select2.full.min.js') }}"></script>
