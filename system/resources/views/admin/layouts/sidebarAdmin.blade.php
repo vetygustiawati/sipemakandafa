@@ -101,7 +101,14 @@
               </p>
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a href="{{url('admin/mws')}}" class="nav-link {{checkRouteActive('admin/mws')}}" style="background: #EDC7B7; color: black; !important">
+            <i class="nav-icon fas fa-layer-group"></i>
+              <p>
+              MWS
+              </p>
+            </a>
+          </li>
           
           
         </ul>

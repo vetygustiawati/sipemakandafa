@@ -8,6 +8,7 @@ use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\UangmakanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\MwsController;
 
 Route::get('/', function () {
     return view('home');
@@ -62,6 +63,11 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('laporan',[LaporanController::class,'indexAdmin']);
 	Route::get('laporan/laporanBulanan', [LaporanController::class, 'laporanBulanan']);
 			
+	// mws
+	Route::get('mws',[MwsController::class,'index']);
+	Route::post('mws',[MwsController::class,'store']);
+	Route::get('mws/edit/{mws}',[MwsController::class,'edit']);
+	Route::delete('mws/{mws}',[MwsController::class,'destroy']);
  });
 
 Route::get('base', [HomeController::class, 'showBaseWalisantri']);
