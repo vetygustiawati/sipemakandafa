@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jun 27, 2021 at 12:29 PM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.4.12
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 28 Jun 2021 pada 09.51
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.3.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sipemakandafa`
+-- Database: `sipemakansantri`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `administrasi`
+-- Struktur dari tabel `administrasi`
 --
 
 CREATE TABLE `administrasi` (
@@ -35,7 +35,7 @@ CREATE TABLE `administrasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `administrasi`
+-- Dumping data untuk tabel `administrasi`
 --
 
 INSERT INTO `administrasi` (`id`, `nama_administrasi`, `created_at`, `updated_at`) VALUES
@@ -55,7 +55,7 @@ INSERT INTO `administrasi` (`id`, `nama_administrasi`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `presensi`
+-- Struktur dari tabel `presensi`
 --
 
 CREATE TABLE `presensi` (
@@ -63,30 +63,26 @@ CREATE TABLE `presensi` (
   `id_santri` int(11) NOT NULL,
   `bln` varchar(255) DEFAULT NULL,
   `tgl_presensi` date DEFAULT NULL,
-  `status` enum('hadir','tidak hadir','romadhon') DEFAULT NULL,
+  `status` enum('hadir','tidak hadir') DEFAULT NULL,
   `keterangan` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `presensi`
+-- Dumping data untuk tabel `presensi`
 --
 
 INSERT INTO `presensi` (`id`, `id_santri`, `bln`, `tgl_presensi`, `status`, `keterangan`, `created_at`, `updated_at`) VALUES
 (42, 1114022, '05', '2021-05-28', 'hadir', NULL, '2021-05-28 08:02:43', '2021-05-28 08:02:43'),
 (46, 1117086, '06', '2021-06-16', 'hadir', NULL, '2021-06-16 05:48:28', '2021-06-16 05:48:28'),
 (47, 1117011, '06', '2021-06-18', 'hadir', NULL, '2021-06-18 02:14:21', '2021-06-18 02:14:21'),
-(48, 1117020, '06', '2021-06-19', 'hadir', NULL, '2021-06-18 21:29:36', '2021-06-18 21:29:36'),
-(49, 1114005, '06', '2021-06-19', 'hadir', NULL, '2021-06-19 00:33:52', '2021-06-19 00:33:52'),
-(50, 1117086, '06', '2021-06-20', 'hadir', NULL, '2021-06-20 00:34:41', '2021-06-20 00:34:41'),
-(51, 1117092, '06', '2021-06-20', 'hadir', NULL, '2021-06-20 00:36:56', '2021-06-20 00:36:56'),
-(52, 1117092, '06', '2021-06-22', 'hadir', NULL, '2021-06-22 04:58:05', '2021-06-22 04:58:05');
+(48, 1117020, '06', '2021-06-19', 'hadir', NULL, '2021-06-18 21:29:36', '2021-06-18 21:29:36');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `santri`
+-- Struktur dari tabel `santri`
 --
 
 CREATE TABLE `santri` (
@@ -105,12 +101,12 @@ CREATE TABLE `santri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `santri`
+-- Dumping data untuk tabel `santri`
 --
 
 INSERT INTO `santri` (`id`, `id_santri`, `nama_santri`, `foto`, `tpt_lahir`, `tgl_lahir`, `jk`, `alamat`, `nm_wsantri`, `no_hp`, `created_at`, `updated_at`) VALUES
 (12, 1114022, 'Suni Marwan', 'app/images/santri/12-1623992805-uiWR2.png', 'Ketapang', '2002-04-14', 'laki-laki', 'Jl.W.Mongonsidi', 'Misuri', '085210981223', '2021-01-08 02:35:08', '2021-06-17 22:06:45'),
-(13, 1117011, 'Alif Rahmad Nur Muhammad', 'app/images/santri/13-1624787463-Is7Kb.png', 'Ketapang', '2002-06-07', 'laki-laki', 'Jl. Rahadi Usman', 'Kamrin', '089693518338', '2021-01-08 06:48:03', '2021-06-27 02:51:03'),
+(13, 1117011, 'Alif Rahmad Nur Muhammad', 'app/images/santri/13-1623992548-Y8Q6a.png', 'Ketapang', '2002-06-07', 'laki-laki', 'Jl. Rahadi Usman', 'Kamrin', '081345016971', '2021-01-08 06:48:03', '2021-06-17 22:02:28'),
 (14, 1117086, 'Ariyan Saputra', 'app/images/santri/14-1623992642-mucXj.png', 'Sukamulya', '2003-10-10', 'laki-laki', 'Blok F SP 1', 'Iing', '085252521212', '2021-01-08 06:49:18', '2021-06-17 22:04:02'),
 (15, 1117020, 'M Fakhri Zahid Fadhilah', 'app/images/santri/15-1623992700-vVaDd.png', 'Ketapang', '2001-09-09', 'laki-laki', 'Satong MHU', 'Zainal Arifin', '082350361419', '2021-01-08 06:51:04', '2021-06-17 22:05:00'),
 (16, 1114005, 'Dani Akbar', 'app/images/santri/16-1623992673-CCtD7.png', 'Ketapang', '2001-10-28', 'laki-laki', 'Jl. Rahadi Usman', 'Aryanto', '085349113336', '2021-01-08 06:53:54', '2021-06-17 22:04:34'),
@@ -119,12 +115,13 @@ INSERT INTO `santri` (`id`, `id_santri`, `nama_santri`, `foto`, `tpt_lahir`, `tg
 (19, 1117092, 'Muhammad Asis', 'app/images/santri/19-1623992727-9JDVS.png', 'Ketapang', '2001-09-15', 'laki-laki', 'Jl.P.Hidayat', 'Juri', '085220551352', '2021-01-08 07:06:04', '2021-06-17 22:05:27'),
 (22, 1117081, 'Suhardiansyah', 'app/images/santri/22-1623992763-QCBPS.png', 'Ketapang', '2021-01-11', 'laki-laki', 'Sukabaru', 'marhasan', '083143850369', '2021-01-10 19:13:40', '2021-06-17 22:06:03'),
 (23, 1115001, 'Vety Gustiawatii', 'app/images/santri/23-1623992913-fSzxH.png', 'Ketapang', '2000-08-17', 'perempuan', 'Sukabaru', 'marhasan', '085220551352', '2021-06-04 08:26:25', '2021-06-17 22:08:33'),
-(26, 11121314, 'ilham oke', 'app/images/santri/26-1623992504-ucWXg.png', 'ketapang', '2121-02-21', 'laki-laki', 'sukabaru', 'marhasan', '09876', '2021-06-17 09:21:29', '2021-06-17 22:01:44');
+(26, 11121314, 'ilham oke', 'app/images/santri/26-1623992504-ucWXg.png', 'ketapang', '2121-02-21', 'laki-laki', 'sukabaru', 'marhasan', '09876', '2021-06-17 09:21:29', '2021-06-17 22:01:44'),
+(30, 1117002, 'Muhammad Ilham', 'app/images/santri/30-1624780417-evYKl.png', 'ketapang', '2000-10-10', 'laki-laki', 'sukabaru', 'marhasan', '089612435676', '2021-06-27 00:51:55', '2021-06-27 00:53:37');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `uangmakan`
+-- Struktur dari tabel `uangmakan`
 --
 
 CREATE TABLE `uangmakan` (
@@ -141,7 +138,7 @@ CREATE TABLE `uangmakan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `uangmakan`
+-- Dumping data untuk tabel `uangmakan`
 --
 
 INSERT INTO `uangmakan` (`id`, `id_santri`, `id_user`, `id_administrasi`, `nominal`, `tgl`, `status`, `keterangan`, `created_at`, `updated_at`) VALUES
@@ -153,60 +150,60 @@ INSERT INTO `uangmakan` (`id`, `id_santri`, `id_user`, `id_administrasi`, `nomin
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
+  `id_user` int(11) DEFAULT NULL,
   `id_santri` int(11) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL,
-  `level2` enum('putra','putri') DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `id_santri`, `username`, `email`, `password`, `level`, `level2`, `created_at`, `updated_at`) VALUES
-(3, NULL, 'admin', 'admin@gmail.com', '$2y$10$FLrwV6Y9Q34naKeTNSbqZuAZzMpzpb8V94mxELSd/MuMl4U2voGOG', 'admin', 'putra', '2020-12-08 06:05:01', '2021-05-08 01:18:31'),
-(6, NULL, 'pengasuh', 'pengasuh@gmail.com', '$2y$10$FLrwV6Y9Q34naKeTNSbqZuAZzMpzpb8V94mxELSd/MuMl4U2voGOG', 'pengasuh', NULL, '2020-12-04 23:24:45', '2020-12-04 23:24:45'),
-(15, 14, 'ariyan', 'ariyan@gmail.com', '$2y$10$YOFQKB4yBLTDDhvdLizZl.gPygesVw0gn/d1pgdYQq3r8G.KGXHZC', 'walisantri', NULL, '2021-06-18 21:43:53', '2021-06-18 21:43:53'),
-(16, 13, 'alif', 'alif@gmail.com', '$2y$10$t8JzUT6NO3XgxSgzeVR6uOTENzk.QxoU/TuN4lqbXLytR4bNu/qkG', 'walisantri', NULL, '2021-06-18 21:44:43', '2021-06-18 21:44:43'),
-(19, NULL, 'fakhri', 'fakhri@gmail.com', '$2y$10$4xhPKIB4qtqOpXDNFizP5utPbpvTt9VHxi0ar8jaulgqk82gQV/H.', 'walisantri', NULL, '2021-06-18 22:14:19', '2021-06-18 22:14:19'),
-(21, 12, 'suni', 'suni@sipemakan.id', '$2y$10$l0ICWL0mwd6vJvaHg7ugbOm1CrgS8GJh1TymzxGJJ.ngdJRmzLMxi', 'walisantri', NULL, '2021-06-22 04:54:47', '2021-06-22 04:54:47'),
-(22, 19, 'asis', 'asis@sipemakan.id', '$2y$10$SjMbMuyWdVKZNdt83Of8Ee61hibJd5oNIVPnUIQEaQW8EeiFJYh9K', 'walisantri', NULL, '2021-06-22 04:56:36', '2021-06-22 04:56:36'),
-(23, 26, 'ilham', 'ilham@sipemakan.id', '$2y$10$LMjKT/ktvkvSmB6FZS8K0uhusmY0cIVzb7x7TJpAnjhP4Vx4in4rS', 'walisantri', NULL, '2021-06-27 02:57:36', '2021-06-27 02:57:36');
+INSERT INTO `user` (`id`, `id_user`, `id_santri`, `username`, `email`, `password`, `level`, `nama`, `created_at`, `updated_at`) VALUES
+(3, NULL, NULL, 'admin', 'admin@gmail.com', '$2y$10$FLrwV6Y9Q34naKeTNSbqZuAZzMpzpb8V94mxELSd/MuMl4U2voGOG', 'admin', NULL, '2020-12-08 06:05:01', '2021-05-08 01:18:31'),
+(6, NULL, NULL, 'pengasuh', 'pengasuh@gmail.com', '$2y$10$FLrwV6Y9Q34naKeTNSbqZuAZzMpzpb8V94mxELSd/MuMl4U2voGOG', 'pengasuh', NULL, '2020-12-04 23:24:45', '2020-12-04 23:24:45'),
+(15, 14, 14, 'ariyan', 'ariyan@gmail.com', '$2y$10$YOFQKB4yBLTDDhvdLizZl.gPygesVw0gn/d1pgdYQq3r8G.KGXHZC', 'walisantri', NULL, '2021-06-18 21:43:53', '2021-06-18 21:43:53'),
+(16, 13, NULL, 'alif', 'alif@gmail.com', '$2y$10$t8JzUT6NO3XgxSgzeVR6uOTENzk.QxoU/TuN4lqbXLytR4bNu/qkG', 'walisantri', NULL, '2021-06-18 21:44:43', '2021-06-18 21:44:43'),
+(17, NULL, NULL, 'suni', 'suni@gmail.com', '$2y$10$45T/ZhOgZzVnFBzSZy8vuOlmPxVySTup2rCqqv2bMdIyK8hEd.sIO', 'walisantri', NULL, '2021-06-18 21:45:42', '2021-06-18 21:45:42'),
+(19, NULL, NULL, 'fakhri', 'fakhri@gmail.com', '$2y$10$l05uicmP8X0wJugxR3pliu9UTqfbGtw/LaAgWI/LjXnxJnIxdt0pW', 'walisantri', NULL, '2021-06-18 22:14:19', '2021-06-24 09:43:59'),
+(20, NULL, 29, 'ilham', 'ilham@gmail.com', '$2y$10$9DmVCZsJYHrTb3eR4pC3sOpn9O7l.X4iaSg4KgzOEk4E1G./zQCzG', 'walisantri', NULL, '2021-06-26 20:37:00', '2021-06-26 20:37:00');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `administrasi`
+-- Indeks untuk tabel `administrasi`
 --
 ALTER TABLE `administrasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `presensi`
+-- Indeks untuk tabel `presensi`
 --
 ALTER TABLE `presensi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_santri` (`id_santri`);
 
 --
--- Indexes for table `santri`
+-- Indeks untuk tabel `santri`
 --
 ALTER TABLE `santri`
   ADD PRIMARY KEY (`id`,`id_santri`);
 
 --
--- Indexes for table `uangmakan`
+-- Indeks untuk tabel `uangmakan`
 --
 ALTER TABLE `uangmakan`
   ADD PRIMARY KEY (`id`),
@@ -214,44 +211,44 @@ ALTER TABLE `uangmakan`
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `administrasi`
+-- AUTO_INCREMENT untuk tabel `administrasi`
 --
 ALTER TABLE `administrasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `presensi`
+-- AUTO_INCREMENT untuk tabel `presensi`
 --
 ALTER TABLE `presensi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT for table `santri`
+-- AUTO_INCREMENT untuk tabel `santri`
 --
 ALTER TABLE `santri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT for table `uangmakan`
+-- AUTO_INCREMENT untuk tabel `uangmakan`
 --
 ALTER TABLE `uangmakan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
