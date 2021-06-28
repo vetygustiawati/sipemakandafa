@@ -19,13 +19,12 @@
                           </tr>
                         </thead>
                         <tbody>
-                         @foreach($laporan_presensi as $lappres)
+                         @foreach($laporan_presensi as $d)
                           <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$lappres->nama_santri}}</td>
-                              <td>{{$lappres->nm_wsantri}}</td>
-                              <td>{{$lappres->status}}</td>
-                              
+                            <td>{{$d->nama_santri}}</td>
+                            <td>{{$d->nm_wsantri}}</td>
+                            <td>{{$d->status}}</td>
                           </tr>
                           @endforeach
                         </tbody> 

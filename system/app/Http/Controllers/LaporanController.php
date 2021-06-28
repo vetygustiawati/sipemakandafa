@@ -94,12 +94,10 @@ class LaporanController extends Controller
         ->get();
         return view('pengasuh.laporan.index',$data);
     }
-    function laporanBulanan(laporan $laporan){
+    function laporanBulanan(){
         $data['laporan_presensi'] =  DB::table('presensi')
-            ->select('santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','status'
-                
-                )
-            ->join ('santri', 'presensi.id_santri', '=', 'santri.id_santri')
+            ->select('santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','status')
+            ->join('santri', 'presensi.id_santri', '=', 'santri.id_santri')
             ->groupBy ('id_santri')
             ->get();
         return view('admin.laporan.laporanBulanan', $data);
