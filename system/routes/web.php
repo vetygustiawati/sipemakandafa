@@ -29,7 +29,7 @@ Route::prefix('admin')->middleware('auth')->group(function() {
     Route::get('santri/show/{santri}', [SantriController::class, 'show']);
     Route::get('santri/{santri}/edit', [SantriController::class, 'edit']);
     Route::put('santri/{santri}', [SantriController::class, 'update']);
-    Route::delete('santri/{santri}', [SantriController::class, 'destroy']);
+    Route::get('santri/del/{santri}', [SantriController::class, 'destroy']);
 
 	Route::get('presensi', [PresensiController::class, 'indexAdmin']);
     Route::get('presensi/create', [PresensiController::class, 'create']);

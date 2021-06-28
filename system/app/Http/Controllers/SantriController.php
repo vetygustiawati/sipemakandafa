@@ -75,9 +75,9 @@ class SantriController extends Controller{
 
 		return redirect('admin/santri/putra')->with('success','Data Berhasil Diedit');
 	}
-	function destroy(Request $request){
-		dd(request()->all());
-		$santri->delete();
+	function destroy($santri){
+		// dd($santri);
+		$del = DB::table('santri')->where('id', $santri)->delete();
 		return redirect('admin/santri/putra')->with('danger','Data Berhasil Dihapus');
 
 	}

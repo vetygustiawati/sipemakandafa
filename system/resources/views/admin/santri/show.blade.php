@@ -141,7 +141,7 @@
 
                     <div class="col-md-2">
                         <a href="{{url('admin/santri', $santri->id)}}/edit" class="btn btn-primary btn-sm my-1 mr-sm-1 btn-block"><i class="nav-icon fas fa-pencil-alt"></i> Edit</a>
-                        @include('admin.template.utils.delete', ['url' => url('admin/santri', $santri->id)])
+                        <a href="{{url('admin/santri/del', $santri->id)}}" class="btn btn-danger btn-sm my-1 mr-sm-1 btn-block" onsubmit="return confirm('Apakah anda yakin akan menghapus data ini ??')"><i class="nav-icon fas fa-trash-alt"></i> Delete</a>
 
                     </div>
                 </div>
