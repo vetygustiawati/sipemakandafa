@@ -12,18 +12,14 @@ use App\Http\Controllers\LaporanController;
 Route::get('/', function () {
     return view('home');
 });
+
 Route::get('base', [HomeController::class, 'showBaseAdmin']);
 Route::get('home', [HomeController::class, 'showHome']);
 Route::get('visimisi', [HomeController::class, 'showVisimisi']);
 Route::get('infopondok', [HomeController::class, 'showInfopondok']);
 
-// Route::get('dashboard', [AdminController::class, 'showDashboard']);
-// Route::get('home', [HomeController::class, 'showHomeAdmin']);
-
 Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('dashboard', [HomeController::class, 'dashboardAdmin']);
-	// Route::get('profil', [HomeController::class, 'profilAdmin']);
-	// Route::get('home', [HomeController::class, 'homeAdmin']);
 	Route::get('profile', [HomeController::class, 'profileAdmin']);
 
     Route::get('santri/create', [SantriController::class, 'create']);
@@ -66,18 +62,12 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	Route::get('laporan',[LaporanController::class,'indexAdmin']);
 	Route::get('laporan/laporanBulanan', [LaporanController::class, 'laporanBulanan']);
 			
-	// Route::resource('user', UserController::class)->middleware('auth');
  });
 
 Route::get('base', [HomeController::class, 'showBaseWalisantri']);
 
-// Route::get('dashboard', [WalisantriController::class, 'showDashboard']);
-// Route::get('home', [HomeController::class, 'showHomeWalisantri']);
-
 Route::prefix('walisantri')->middleware('auth')->group(function() {
 	Route::get('dashboard', [HomeController::class, 'dashboardWalisantri']);
-	// Route::get('profil', [HomeController::class, 'profilWalisantri']);
-	// Route::get('home', [HomeController::class, 'homeWalisantri']);
 	Route::get('santri', [SantriController::class, 'indexWalisantri']);
 	Route::get('presensi', [PresensiController::class, 'indexWalisantri']);
 	Route::get('uangmakan', [UangmakanController::class, 'indexWalisantri']);
@@ -89,13 +79,8 @@ Route::prefix('walisantri')->middleware('auth')->group(function() {
 
 Route::get('base', [HomeController::class, 'showBasePengasuh']);
 
-// Route::get('dashboard', [PengasuhController::class, 'showDashboard']);
-// Route::get('home', [HomeController::class, 'showHomePengasuh']);
-
 Route::prefix('pengasuh')->middleware('auth')->group(function() {
 	Route::get('dashboard', [HomeController::class, 'dashboardPengasuh']);
-	// Route::get('profil', [HomeController::class, 'profilPengasuh']);
-	// Route::get('home', [HomeController::class, 'homePengasuh']);
 	
 	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananPengasuh']);
 	Route::get('laporanCari',[LaporanController::class,'cariPengasuh']);

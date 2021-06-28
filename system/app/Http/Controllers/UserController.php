@@ -11,14 +11,12 @@ class UserController extends Controller{
 	}
 	function indexWalisantri(){
 		$id_santri = request()->user()->id;
-		$data['list_user'] = User::all();
-		$data['santri'] = Santri::all();
+		$data['list_user'] = User::where('id',$id_santri)->get();
 		return view('walisantri.user.index', $data);
 	}
 	function indexPengasuh(){
 		$id_santri = request()->user()->id;
-		$data['list_user'] = User::all();
-		$data['santri'] = Santri::all();
+		$data['list_user'] = User::where('id',$id_santri)->get();
 		return view('pengasuh.user.index', $data);
 	}
 	function create(){

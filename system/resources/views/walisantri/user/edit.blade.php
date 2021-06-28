@@ -19,17 +19,6 @@
 						@method("PUT")
        
 <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Nama</label>
-        <div class="col-sm-10">
-          <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <i class="fa fa-table"></i> 
-            </div>
-          </div>
-          <input type="text" name="nama" value="{{$user->nama}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
-          </div>
-        </div>
       </div>
       <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Email</label>
@@ -39,7 +28,7 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-         <input type="email" name="email" value="{{$user->email}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+         <input type="email" name="email" readonly="" value="{{$user->email}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
         </div>          
       </div>
       <div class="form-group row">
@@ -51,7 +40,7 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-          <input type="text" name="username" value="{{$user->username}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+          <input type="text" name="username" readonly="" value="{{$user->username}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
           </div>
         </div>
       </div>
@@ -64,7 +53,7 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-          <input type="text" name="password" value="{{$user->password}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+          <input type="password" name="password" value="" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
           </div>
         </div>
       </div>
@@ -77,7 +66,7 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-          <input type="text" name="level" value="{{$user->level}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+          <input type="text" name="level" readonly="" value="{{$user->level}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
           </div>
         </div>
       </div>
