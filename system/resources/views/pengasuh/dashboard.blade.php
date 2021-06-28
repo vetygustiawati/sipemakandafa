@@ -5,7 +5,7 @@
     <section class="content">
       <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-light pt-2" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="{{url('/profil')}}" style="color: black">Selamat Datang Admin</a>
+        <a class="navbar-brand" href="{{url('/profil')}}" style="color: black">Selamat Datang Pengasuh</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>

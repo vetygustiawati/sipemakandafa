@@ -5,12 +5,14 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="card">
-				<!-- <div class="card-header">
-				<div class="card-title">Periode Laporan</div>
+				<div class="card-header">
+					<div class="card-title">Filter</div>
 					<div class="card-tools">
-						
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
 					</div>
-				</div> -->
+				</div>
 				
 				<div class="card-body">
 				<form action="{{url('admin/laporanCari')}}" method="get">
@@ -60,7 +62,8 @@
 				<div class="card-header">
 					<div class="card-title">Laporan Presensi</div>
 					<div class="card-tools">
-						
+						<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fa fa-minus"></i></button>
+
 					</div>
 					<span style="float: right">
                
@@ -75,7 +78,7 @@
 								<th>NO</th>
 								<th>Nama Santri</th>
 								<th>Nama Wali Santri</th>
-								<th>Tahun</th>
+								<th>Tanggal</th>
 								<th>Bulan</th>
 								<th>Status</th>
 							</thead>

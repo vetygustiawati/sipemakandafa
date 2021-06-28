@@ -7,8 +7,8 @@
               <div class="card-header">
                 <h5 class="card-title"> <b>Tambah Jadwal MWS</b> </h5>
                 <div class="card-tools">
-                  <button type="button" class="btn btn-tool btn-dark" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fa fa-minus"></i>
                   </button>
                 </div>
               </div>
@@ -66,9 +66,11 @@
 				        </div>
 						
 						<div class="form-group">
-							<button type="submit" name="simpan" id="simpan" class="btn btn-dark float-right">
-								<i class="fa fa-save"></i> Simpan
-							</button>
+							 <div class="text-right">
+							<button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+        <button class="btn btn-danger" type="reset"><i class="fa fa-times-circle"></i> Reset
+        </button>
+    </div>
 						</div>
 		        	</form>
 				</div>
@@ -77,7 +79,7 @@
               <div class="card-header">
                 <h5 class="card-title"> <b>Index Jadwal MWS</b> </h5>
                 <div class="card-tools">
-                  <button type="button" class="btn btn-tool btn-dark" data-card-widget="collapse">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
                 </div>
@@ -103,7 +105,7 @@
 			<td>
 				<div class="btn-group">
 				<button id="{{$d->id}}" class="btn btn-warning btn-sm edit_data"><i class="fa fa-edit"></i></button>
-				<form action="{{url('admin/mws',$d->id)}}" method="post" class="form-inline" onsubmit="return confirm('Apakah anda yakin akan menghapus data ini ??')">
+				<form action="{{url('admin/mws',$d->id)}}" method="post" class="form-inline" onsubmit="return confirm('Yakin Ingin Menghapus Data Ini?')">
 					@csrf
 					@method("delete")
 					<button class="btn btn-danger btn-sm"><i class="nav-icon fas fa-trash"></i></button>

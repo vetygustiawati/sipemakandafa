@@ -61,7 +61,7 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	//laporan
 	Route::get('laporanCari',[LaporanController::class,'cariAdmin']);
 	Route::get('laporan',[LaporanController::class,'indexAdmin']);
-	Route::get('laporan/laporanBulanan', [LaporanController::class, 'laporanBulanan']);
+	Route::get('laporan/laporanBulanan', [LaporanController::class, 'laporanBulananAdmin']);
 			
 	// mws
 	Route::get('mws',[MwsController::class,'index']);
@@ -88,9 +88,12 @@ Route::get('base', [HomeController::class, 'showBasePengasuh']);
 Route::prefix('pengasuh')->middleware('auth')->group(function() {
 	Route::get('dashboard', [HomeController::class, 'dashboardPengasuh']);
 	
-	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananPengasuh']);
+	
+
+	//laporan
 	Route::get('laporanCari',[LaporanController::class,'cariPengasuh']);
 	Route::get('laporan',[LaporanController::class,'indexPengasuh']);
+	Route::get('laporan/laporanBulanan', [LaporanController::class, 'laporanBulananPengasuh']);
 
 	Route::get('user', [UserController::class, 'indexPengasuh']);
     Route::get('user/{user}/edit', [UserController::class, 'editPengasuh']);

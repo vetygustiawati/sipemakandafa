@@ -71,7 +71,7 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-          <input type="text" name="password" value="{{$user->password}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+          <input type="password" name="password" value="" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
           </div>
         </div>
       </div>
