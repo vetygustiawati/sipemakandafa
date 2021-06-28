@@ -54,7 +54,7 @@
     </nav>
     <!-- END nav -->
 
-    <section class="hero-wrap js-fullheight img" style="background-image: url(public/web/images/dafa.jpg);">
+    <section class="hero-wrap js-fullheight img" style="background-image: url(public/web/images/ws7.jpg);">
       <div class="overlay"></div>
       <div class="container">
         <div class="row description js-fullheight align-items-center justify-content-center">

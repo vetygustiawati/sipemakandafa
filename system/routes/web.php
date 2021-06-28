@@ -51,7 +51,7 @@ Route::prefix('admin')->middleware('auth')->group(function() {
     Route::delete('uangmakan/{uangmakan}', [UangmakanController::class, 'destroy']);
 
 	Route::get('uangmakan/kwitansiThermo/{uangmakan}', [UangmakanController::class, 'kwitansiThermo']);
-	Route::get('uangmakan/laporanBulanan/{uangmakan}', [UangmakanController::class, 'laporanBulananAdmin']);
+	
 
 	Route::get('user', [UserController::class, 'indexAdmin']);
     Route::get('user/create', [UserController::class, 'create']);
@@ -64,6 +64,7 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	//laporan
 	Route::get('laporanCari',[LaporanController::class,'cariAdmin']);
 	Route::get('laporan',[LaporanController::class,'indexAdmin']);
+	Route::get('laporan/laporanBulanan/{laporan}', [LaporanController::class, 'laporanBulanan']);
 			
 	// Route::resource('user', UserController::class)->middleware('auth');
  });

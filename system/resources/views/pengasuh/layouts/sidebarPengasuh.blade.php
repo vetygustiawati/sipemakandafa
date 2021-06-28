@@ -21,7 +21,7 @@
         <div class="info">
           <a href="#" class="d-block">
             @if(Auth::check())
-            {{request()->user()->nama}}
+            {{request()->user()->username}}
             @else
             Silahkan Login
             @endif

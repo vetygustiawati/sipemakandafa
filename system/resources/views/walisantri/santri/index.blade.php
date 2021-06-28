@@ -152,7 +152,7 @@
 
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <h5 style="font-family: times new roman"><b><i class="nav-icon fas fa-user"></i>  Id Santri</h5>
+                                                <h5 style="font-family: times new roman"><b><i class="nav-icon fas fa-key"></i>  Id Santri</h5>
                                                 <h5 style="font-family: times new roman">  {{$santri->id_santri}}</h5>
                                             </div>
                                         </div>
@@ -193,7 +193,7 @@
                                         <br>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <h5 style="font-family: times new roman"><b><i class="nav-icon fas fa-address-book"></i> Nama Wali Santri</h5>
+                                                <h5 style="font-family: times new roman"><b><i class="nav-icon fas fa-user-circle"></i> Nama Wali Santri</h5>
                                                  <h5 style="font-family: times new roman">{{$santri->nm_wsantri}}</h5>
                                             </div>
                                         </div>

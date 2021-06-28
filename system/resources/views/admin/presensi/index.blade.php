@@ -57,7 +57,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 mt-3">
+		<div class="col-md-15 mt-6">
 			<div class="card">
 				<div class="card-header">
 					<div class="card-title">Data Presensi</div>

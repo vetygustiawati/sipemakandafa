@@ -54,13 +54,13 @@
     </nav>
     <!-- END nav -->
 
-    <section class="hero-wrap js-fullheight img" style="background-image: url(public/web/images/dafa.jpg);">
+    <section class="hero-wrap js-fullheight img" style="background-image: url(public/web/images/ws1.jpg);">
       <div class="overlay"></div>
       <div class="container">
         <div class="row description js-fullheight align-items-center justify-content-justify">
           <div class="col-md-8 text-justify">
             <div class="text">
-              <h2 style="font-color: white;"><b>Visi Pondok Pesantren Darul Fadhilah Ketapang</h2>
+              <h2 style="font-color: black;"><b>Visi Pondok Pesantren Darul Fadhilah Ketapang</h2>
               <h6 class="mb-5">Memasyarakatkan Al-Qur’an dan Meng Al-Qur’ankan Masyarakat</h6>
             </div>
             <div class="text">

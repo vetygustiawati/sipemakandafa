@@ -33,7 +33,7 @@ class PresensiController extends Controller{
 	}
 	function indexWalisantri(){
 	// 	// $data['list_presensi'] = Presensi::all();
-		$id_santri = request()->user()->id;
+		$id_santri = request()->user()->id_santri;
 		// dd($id_santri);
 
 		$data['list_presensi'] =  DB::table('presensi')
@@ -54,7 +54,7 @@ class PresensiController extends Controller{
 				DB::raw("count(status) as acount")
 	        	)
 	      	->where('santri.id', '=', $id_santri)
-	    	->join ('santri', 'presensi.id_santri', '=', 'santri.id')
+	    	->join ('santri', 'presensi.id_santri', '=', 'santri.id_santri')
 	    	->groupBy ('id_santri')
 	        ->get();
 

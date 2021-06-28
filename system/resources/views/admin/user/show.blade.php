@@ -106,9 +106,9 @@
     <title>SIPEMAKAN</title>
 </head>
 <body>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile">
@@ -153,16 +153,8 @@
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h5 style="font-family: times new roman"><b><i class="nav-icon fas fa-user"></i>  Nama</h5>
-                                                <h5 style="font-family: times new roman">  {{$user->nama}}</h5>
-                                            </div>
-                                        </div>
-                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                               
-                            </ul>
-                                        <br>
+                                        
+                                        
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <h5 style="font-family: times new roman"><b><i class="nav-icon fas fa-envelope"></i>  Email</h5>

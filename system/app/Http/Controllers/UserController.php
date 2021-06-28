@@ -30,7 +30,6 @@ class UserController extends Controller{
 		$user->id_santri = request ('id_santri');
 		$user->username = request ('username');
 		$user->email = request ('email');
-		$user->nama = request ('nama');
 		$user->password = bcrypt(request ('password'));
 		$user->level = request ('level');
 		// dd(request()->all());
@@ -60,7 +59,7 @@ class UserController extends Controller{
 	}
 	function updateAdmin(User $user){
 
-		$user->nama = request ('nama');
+		$user->id_santri = request ('id_santri');
 		$user->username = request ('username');
 		$user->email = request ('email');
 		$user->level = request ('level');
@@ -70,7 +69,7 @@ class UserController extends Controller{
 	}
 	function updateWalisantri(User $user){
 
-		$user->nama = request ('nama');
+		$user->id_santri = request ('id_santri');
 		$user->username = request ('username');
 		$user->email = request ('email');
 		$user->level = request ('level');
@@ -80,7 +79,7 @@ class UserController extends Controller{
 	}
 	function updatePengasuh(User $user){
 
-		$user->nama = request ('nama');
+		$user->id_santri = request ('id_santri');
 		$user->username = request ('username');
 		$user->email = request ('email');
 		$user->level = request ('level');

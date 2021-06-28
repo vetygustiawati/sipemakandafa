@@ -50,7 +50,7 @@
 					</div>
 					<span style="float: right">
                
-               <a class="btn btn-primary btn-sm my-1 mr-sm-1" ><i class="fas fa-print"></i> Cetak</a>
+               <a href="{{url('admin/laporan/laporanBulanan')}}" class="btn btn-primary btn-sm my-1 mr-sm-1" target="_blank"><i class="fa fa-print"></i>Cetak Laporan</a>
                     
             </span>
 				</div>

@@ -27,7 +27,14 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-          <input type="text" name="nama" value="{{$user->nama}}" class="form-control bg-light" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+          <!-- <input type="text" name="nama" class="form-control bg-light" placeholder="Nama"
+          required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')"> -->
+          <select name="id_santri" class="form-control select2">
+            <option >--Pilih Santri--</option>
+            @foreach ($santri as $d)
+            <option value="{{$d->id}}">{{$d->nama_santri}}</option>
+            @endforeach
+          </select>
           </div>
         </div>
       </div>
