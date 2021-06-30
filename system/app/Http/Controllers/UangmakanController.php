@@ -36,7 +36,7 @@ class UangmakanController extends Controller{
 	
 	function indexWalisantri(){
 		// $data['list_uangmakan'] = Uangmakan::all();
-		$id_santri = request()->user()->id_santri;
+		$id_santri = request()->user()->id;
 		$data['list_uangmakan'] =  DB::table('uangmakan')
 	        ->select('uangmakan.id as idu','santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','santri.foto','tgl', 'status', 'keterangan','user.id_user','user.nama', 'user.username','nama_administrasi', 'nominal', 'uangmakan.id as iduangmakan',
 	        	DB::raw("sum(case when id_administrasi='01' THEN nominal else 0 end )as jan"),
@@ -78,7 +78,7 @@ class UangmakanController extends Controller{
 		$uangmakan->keterangan = request ('keterangan');
 		$uangmakan->save();
 			
-			return redirect('admin/uangmakan')->with('success','Data Berhasil Ditambahkan');
+			return redirect('admin/uangmakan')->with('success','Data Berhasil Disimpan');
 		
 	}
 	function show(Uangmakan $uangmakan){

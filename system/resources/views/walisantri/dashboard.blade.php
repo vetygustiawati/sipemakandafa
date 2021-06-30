@@ -26,7 +26,7 @@
         <div class="info-box mb-3">
           <span class="info-box-icon bg-info elevation-1"><i class="fa fa-clock"></i></span>
           <div class="info-box-content">
-            <span class="info-box-text">PENGUMUMAN MUSYAWAROH WALI SANTRI (<b>MWS</b>)</span>
+            <span class="info-box-text">PENGUMUMAN MUSYAWARAH WALI SANTRI (<b>MWS</b>)</span>
             <span class="info-box-number">
               {{ date('l, d F Y', strtotime($mws[0]->hari)) }}
               <br>

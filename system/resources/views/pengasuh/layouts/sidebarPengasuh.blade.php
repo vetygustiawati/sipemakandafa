@@ -45,7 +45,7 @@
             <a href="{{url('pengasuh/laporan')}}" class="nav-link {{checkRouteActive('pengasuh/laporan')}}" style="background: #EDC7B7; color: black; !important">
             <i class="nav-icon fas fa-layer-group"></i>
               <p>
-                Laporan
+                Laporan Presensi
                 
               </p>
             </a>

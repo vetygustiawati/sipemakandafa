@@ -21,7 +21,7 @@ class SantriController extends Controller{
 		return view('admin.santri.index', $data);
 	}
 	function indexWalisantri(){
-		$id_santri=request()->user()->id_santri;
+		$id_santri=request()->user()->id;
 		$data['list_santri'] = DB::table('santri')->where('id',$id_santri)->get();
 
 		return view('walisantri.santri.index', $data);
@@ -46,7 +46,7 @@ class SantriController extends Controller{
 
 		$santri->handleUploadFoto();
 			
-		return redirect('admin/santri/putra')->with('success','Data Berhasil Ditambahkan');
+		return redirect('admin/santri/putra')->with('success','Data Berhasil Disimpan');
 		
 	}
 	function show(Santri $santri){

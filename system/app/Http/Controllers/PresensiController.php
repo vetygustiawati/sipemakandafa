@@ -33,7 +33,7 @@ class PresensiController extends Controller{
 	}
 	function indexWalisantri(){
 	// 	// $data['list_presensi'] = Presensi::all();
-		$id_santri = request()->user()->id_santri;
+		$id_santri = request()->user()->id;
 		// dd($id_santri);
 
 		$data['list_presensi'] =  DB::table('presensi')
@@ -75,7 +75,7 @@ class PresensiController extends Controller{
 		// dd(request()->all());
 		$presensi->save();
 			
-			return redirect('admin/presensi')->with('success','Data Berhasil Ditambahkan');
+			return redirect('admin/presensi')->with('success','Data Berhasil Disimpan');
 		
 	}
 	function show(Presensi $presensi){

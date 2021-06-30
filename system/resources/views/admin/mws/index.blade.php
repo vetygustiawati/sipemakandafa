@@ -20,7 +20,7 @@
 			        		<div class="col-sm-3">
 			        			<div class="form-group">
 									<label>Bulan</label>
-									<select name="bulan"  class="form-control" required="">
+									<select name="bulan"  class="form-control" placeholder="bulan" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
 										<option value="">--Pilih Bulan--</option>
 						            	<option value="01">1-Januari</option>
 						            	<option value="02">2-Februari</option>
@@ -46,13 +46,13 @@
 				            <div class="col-sm-3">
 				            	<div class="form-group">
 									<label>Tahun</label>
-									<input type="text" name="tahun" id="tahun" class="form-control" required="true" placeholder="2021">
+									<input type="text" name="tahun" id="tahun" class="form-control" placeholder="2021" required="true" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
 								</div>
 				            </div>
 				            <div class="col-sm-3">
 				            	<div class="form-group">
-									<label>Hari</label>
-									<input type="date" name="hari" id="hari" class="form-control" required="true">
+									<label>Tanggal</label>
+									<input type="date" name="hari" id="hari" class="form-control"  required="true" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
 								</div>
 				            </div>
 						</div>
@@ -60,7 +60,7 @@
 					        <div class="col-sm-12">
 								<div class="form-group">
 									<label>Keterangan</label>
-									<textarea name="ket" id="ket" class="form-control" ></textarea>
+									<textarea name="ket" id="ket" class="form-control" required="true" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')"></textarea>
 								</div>
 							</div>
 				        </div>
@@ -77,7 +77,7 @@
 			</div>
 			<div class="card">
               <div class="card-header">
-                <h5 class="card-title"> <b>Index Jadwal MWS</b> </h5>
+                <h5 class="card-title"> <b>Data MWS</b> </h5>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
@@ -92,10 +92,10 @@
 		<tr>
 			<th>No</th>
 			<th>Aksi</th>
-			<th>Tahun</th>
-			<th>Bulan</th>
-			<th>Hari</th>
-			<th>Ket</th>
+			<th>Tanggal</th>
+			<!-- <th>Bulan</th>
+			<th>Tahun</th> -->
+			<th>Keterangan</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -112,9 +112,9 @@
 				</form>
 				</div>
 			</td>
-			<td>{{$d->tahun}}</td>
-			<td>{{$d->bulan}}</td>
 			<td>{{$d->hari}}</td>
+			<!-- <td>{{$d->bulan}}</td>
+			<td>{{$d->tahun}}</td> -->
 			<td>{{$d->ket}}</td>
 		</tr>
 		@endforeach

@@ -17,16 +17,16 @@
 				<div class="card-body">
 				<form action="{{url('admin/laporanCari')}}" method="get">
 					<div class="col-sm-12">
-						<label class="col-sm-3 col-form-label">Pilih Tahun</label>
+						<label class="col-sm-3 col-form-label">Tahun</label>
 						<div class="input-group mb-3">
 				               <div class="input-group-prepend">
 				               	<span class="input-group-text"><i class="fas fa-calendar"></i></span>
 				               </div>
-							<input type="text" name="tahun" id="" placeholder="2021" class="form-control">
+							<input type="text" name="tahun" id="" placeholder="Tahun" class="form-control">
 		               	</div>
 					</div>
 					<div class="col-sm-12">
-						<label class="col-sm-3 col-form-label">Pilih Bulan</label>
+						<label class="col-sm-3 col-form-label">Bulan</label>
 						<div class="input-group mb-3">
 				               <div class="input-group-prepend">
 				               	<span class="input-group-text"><i class="fas fa-calendar"></i></span>

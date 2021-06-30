@@ -35,7 +35,7 @@ class MwsController extends Controller
                 'ket'=>$request->ket
             ]);
         }
-        return redirect('admin/mws')->with('success','Data Berhasil Ditambahkan');
+        return redirect('admin/mws')->with('success','Data Berhasil Disimpan');
     }
 
     public function show($id)
@@ -57,6 +57,6 @@ class MwsController extends Controller
     public function destroy(Mws $mws)
     {
         $mws->delete();
-        return redirect('admin/mws')->with('danger','Data Berhasil di hapus');
+        return redirect('admin/mws')->with('danger','Data Berhasil dihapus');
     }
 }

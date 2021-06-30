@@ -33,7 +33,7 @@ class UserController extends Controller{
 		// dd(request()->all());
 		$user->save();
 			
-		return redirect('admin/user')->with('success','Data Berhasil Ditambahkan');
+		return redirect('admin/user')->with('success','Data Berhasil Disimpan');
 		
 	}
 	function show(User $user){

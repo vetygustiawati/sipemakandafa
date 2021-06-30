@@ -15,6 +15,8 @@
                             <<th>NO</th>
                             <th>NAMA SANTRI</th>
                             <th>NAMA WALI SANTRI</th>
+                            <th>TANGGAL</th>
+                            <th>BULAN</th>
                             <th>STATUS</th>
                           </tr>
                         </thead>
@@ -24,6 +26,8 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$d->nama_santri}}</td>
                             <td>{{$d->nm_wsantri}}</td>
+                            <td>{{$d->tgl_presensi}}</td>
+                            <td>{{$d->bln}}</td>
                             <td>{{$d->status}}</td>
                           </tr>
                           @endforeach

@@ -1,4 +1,4 @@
-@extends ('walisantri.template.base')
+@extends('walisantri.template.base')
 
 @section('content')
 
