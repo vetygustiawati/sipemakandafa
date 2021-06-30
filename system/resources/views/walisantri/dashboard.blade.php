@@ -47,7 +47,7 @@
           <div class="info-box-content">
             <span class="info-box-text">TUNGGAKAN (<b>SPP</b>)</span>
             <span class="info-box-number">
-              3 Bulan - Rp.900.000
+              {{$tunggakan}} Bulan - Rp.{{number_format($tunggakan*300000)}}
             </span>
           </div>
           <!-- /.info-box-content -->

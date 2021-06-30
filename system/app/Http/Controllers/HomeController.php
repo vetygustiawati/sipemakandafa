@@ -35,6 +35,7 @@ class HomeController extends Controller{
 		return view('pengasuh.dashboard', $data);
 	}
 	function dashboardWalisantri(){
+		$id_santri = request()->user()->id_santri;
 		$data['total_santri'] = Santri::all()->count();
 		$data['kehadiran'] = Presensi::all()->count();
 		$data['jumlah_user'] = User::all()->count();
@@ -42,8 +43,15 @@ class HomeController extends Controller{
 		$bulan = date('n');
 		$tahun = date('Y');
 		$data['mws'] = DB::table('mws')->where('bulan',$bulan)->where('tahun',$tahun)->get();
-		// dd($data['mws']);
-		
+		$data['list_lunas'] = DB::table('uangmakan')
+		->select('uangmakan.*','santri.id_santri')
+		->join('santri','uangmakan.id_santri','santri.id_santri')
+		->where('santri.id',$id_santri)
+		->groupBy('id_administrasi')
+		->get();
+		$data['count_lunas'] = count($data['list_lunas']);
+		$data['tunggakan'] = 12-$data['count_lunas'];
+
 		return view('walisantri.dashboard', $data);
 	}
 	
