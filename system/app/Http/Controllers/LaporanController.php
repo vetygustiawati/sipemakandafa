@@ -61,6 +61,8 @@ class LaporanController extends Controller
     {
         $tahun = request()->tahun;
         $bulan = request()->bulan;
+        $data['tahun'] = $tahun;
+        $data['bulan'] = $bulan;
         $data['laporan_presensi'] = DB::table('presensi')
         ->select('presensi.*','santri.id_santri','santri.nm_wsantri','santri.nama_santri')
         ->join('santri','santri.id_santri','presensi.id_santri')
@@ -75,6 +77,8 @@ class LaporanController extends Controller
         
         $tahun = request()->tahun;
         $bulan = request()->bulan;
+        $data['tahun'] = $tahun;
+        $data['bulan'] = $bulan;
         $data['laporan_presensi'] = DB::table('presensi')
         ->select('presensi.*','santri.id_santri','santri.nm_wsantri','santri.nama_santri')
         ->join('santri','santri.id_santri','presensi.id_santri')
@@ -85,17 +89,25 @@ class LaporanController extends Controller
         return view('pengasuh.laporan.index',$data);
     }
     function laporanBulananAdmin(){
+        $tahun = request()->tahun;
+        $bulan = request()->bulan;
         $data['laporan_presensi'] =  DB::table('presensi')
             ->select('santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','status', 'tgl_presensi', 'bln')
             ->join('santri', 'presensi.id_santri', '=', 'santri.id_santri')
+            ->where('bln', $bulan)
+            ->where('tgl_presensi','like', $tahun.'%')
             ->groupBy ('id_santri')
             ->get();
         return view('admin.laporan.laporanBulanan', $data);
     }
     function laporanBulananPengasuh(){
+        $tahun = request()->tahun;
+        $bulan = request()->bulan;
         $data['laporan_presensi'] =  DB::table('presensi')
             ->select('santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','status', 'tgl_presensi', 'bln')
             ->join('santri', 'presensi.id_santri', '=', 'santri.id_santri')
+            ->where('bln', $bulan)
+            ->where('tgl_presensi','like', $tahun.'%')
             ->groupBy ('id_santri')
             ->get();
         return view('pengasuh.laporan.laporanBulanan', $data);

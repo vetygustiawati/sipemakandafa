@@ -8,8 +8,7 @@
 </section>
 <section class="content container-fluid">
     <div class="box-body">
-      <table class ="table table-bordered">
-        
+      <table class="table table-bordered">
             <thead class="text-center">
                           <tr>
                             <<th>NO</th>
