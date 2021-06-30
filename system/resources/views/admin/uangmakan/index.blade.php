@@ -42,6 +42,29 @@
       </div>          
     </div>
     <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Bulan</label>
+      <div class="input-group col-sm-10">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-table"></i> 
+          </div>
+        </div>
+          <select name="id_administrasi" class="form-control" required="">
+          	<option>--Pilih Bulan--</option>
+          	<option value="01" @if(date('m')== 1) selected @endif >1-Januari</option>
+          	<option value="02" @if(date('m')== 2) selected @endif>2-Februari</option>
+          	<option value="03" @if(date('m')== 3) selected @endif>3-Maret</option>
+          	<option value="04" @if(date('m')== 4) selected @endif>4-April</option>
+          	<option value="05" @if(date('m')== 5) selected @endif>5-Mei</option>
+          	<option value="06" @if(date('m')== 6) selected @endif>6-Juni</option>
+          	<option value="07" @if(date('m')== 7) selected @endif>7-Juli</option>
+          	<option value="08" @if(date('m')== 8) selected @endif>8-Agustus</option>
+          	<option value="09" @if(date('m')== 9) selected @endif>9-September</option>
+          	<option value="10" @if(date('m')== 10) selected @endif>10-Oktober</option>
+          	<option value="11" @if(date('m')== 11) selected @endif>11-November</option>
+          	<option value="12" @if(date('m')== 12) selected @endif>12-Desember</option>
+          </select>
+      </div>          
     </div>
 
    
