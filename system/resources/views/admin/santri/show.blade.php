@@ -102,6 +102,7 @@
     color: #0062cc;
 }
 </style>
+
 <head>
     <title>SIPEMAKAN</title>
 </head>
@@ -141,7 +142,7 @@
 
                     <div class="col-md-2">
                         <a href="{{url('admin/santri', $santri->id)}}/edit" class="btn btn-primary btn-sm my-1 mr-sm-1 btn-block"><i class="nav-icon fas fa-pencil-alt"></i> Edit</a>
-                        <a href="{{url('admin/santri/del', $santri->id)}}" class="btn btn-danger btn-sm my-1 mr-sm-1 btn-block"><i class="nav-icon fas fa-trash-alt"></i> Hapus</a>
+                        <a href="{{url('admin/santri/del', $santri->id)}}" class="btn btn-danger btn-sm my-1 mr-sm-1 btn-block" onClick="return confirm('Apakah Anda Ingin Menghapus Data Ini?')"><i class="nav-icon fas fa-trash-alt" ></i> Hapus</a>
 
                     </div>
                 </div>

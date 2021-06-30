@@ -60,7 +60,7 @@
 					        <div class="col-sm-12">
 								<div class="form-group">
 									<label>Keterangan</label>
-									<textarea name="ket" id="ket" class="form-control" required="true" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')"></textarea>
+									<textarea name="ket" id="ket" class="form-control"  oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')"></textarea>
 								</div>
 							</div>
 				        </div>

@@ -112,7 +112,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile">
-            <form method="post">
+            
 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
@@ -140,7 +140,9 @@
                     </div>
 
                     <div class="col-md-2">
+                        <form method="post">
                         <a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-primary btn-sm my-1 mr-sm-1 btn-block"><i class="nav-icon fas fa-pencil-alt"></i> Edit</a>
+                        </form>
                             @include('admin.template.utils.delete', ['url' => url('admin/user', $user->id)])
                     </div>
                 </div>
@@ -191,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-            </form>           
+                       
         </div>
 </body>
 </html>

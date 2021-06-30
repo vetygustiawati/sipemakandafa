@@ -21,7 +21,7 @@ class SantriController extends Controller{
 		return view('admin.santri.index', $data);
 	}
 	function indexWalisantri(){
-		$id_santri=request()->user()->id;
+		$id_santri=request()->user()->id_santri;
 		$data['list_santri'] = DB::table('santri')->where('id',$id_santri)->get();
 
 		return view('walisantri.santri.index', $data);

@@ -66,8 +66,11 @@
 						
 					</div>
 					<span style="float: right">
-               
-               <a href="{{url('pengasuh/laporan/laporanBulanan')}}" class="btn btn-primary btn-sm my-1 mr-sm-1" target="_blank"><i class="fa fa-print"></i>Cetak Laporan</a>
+               <form action="{{url('pengasuh/laporan/laporanBulanan')}}" method="get">
+					<input type="text" name="tahun" value="{{$tahun ?? ''}}">
+					<input type="text" name="bulan" value="{{$bulan ?? ''}}">
+               		<button type="submit" class="btn btn-primary btn-sm my-1 mr-sm-1" target="_blank"><i class="fa fa-print"></i>Cetak Laporan</button>
+               </form>
                     
             </span>
 				</div>
