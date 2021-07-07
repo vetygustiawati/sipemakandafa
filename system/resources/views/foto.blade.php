@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <head>
     <title>SIPEMAKAN</title>
     <meta charset="utf-8">
@@ -44,10 +47,10 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a href="{{url('/home')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-home mr-2"></i> Home</a></li>
             <li class="nav-item"><a href="{{url('/visimisi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Visi Misi</a></li>
-             <li class="nav-item"><a href="{{url('/prestasi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Prestasi</a></li>
+            <li class="nav-item"><a href="{{url('/prestasi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Prestasi</a></li>
             <div class="dropdown">
   <button class=" dropdown-toggle" type="button" data-toggle="dropdown">Informasi Pondok
-  <span class="caret"></span></button>
+  </button>
   <ul class="dropdown-menu">
     <li><a href="{{url('/sejarah')}}">Sejarah</a></li>
     <li><a href="{{url('/infosb')}}">Santri Baru</a></li>
@@ -65,26 +68,133 @@
     </nav>
     <!-- END nav -->
 
-    <section class="hero-wrap js-fullheight img" style="background-image: url(public/web/images/ws1.jpg);">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row description js-fullheight align-items-center justify-content-justify">
-          <div class="col-md-8 text-justify">
-            <div class="text">
-              <h4 style="font-color: white;"><b>Visi Pondok Pesantren Darul Fadhilah Ketapang</b></h4>
-              <h4 class="mb-5">Memasyarakatkan Al-Qur’an dan Meng Al-Qur’ankan Masyarakat</h4>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<section class="" style="background: black;" >
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <br> <br> <br>
+        <h1 style="text-align: center;">Foto Pembangunan Rumah Susun dan Lokal SD</h1>
+        <div class="col-lg-12">
+          
+          <div class="row pt-md">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g1.jpeg" class="img-responsive">
+  
+              </div>
+              <h2><br></h2>
+              
             </div>
-            <div class="text">
-              <h4><b>Misi Pondok Pesantren Darul Fadhilah Ketapang</b></h4>
-              <h4 class="mb-5"  style="text-align: justify;"><ol><li>Mencetak penghafal-penghafal Al-Qur’an yang berkeyakinan dan beramal Ahlussunah waljamaah.</li>
-              <li>Ikut serta dalam usaha mencerdaskan kehidupan bangsa sebagaimana tertuang dalam UUD 1945.</li>
-              <li>Mencetak generasi yang balance, yang mampu menggabungkan cita-cita akhirat dan cita-cita dunia.</li>
-              <li>Mencetak Dai-Dai Mukhlis, Amil, Tawadu’ yang didukung dengan skill-skill usaha.</li></ol></h4>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g2.jpeg" class="img-responsive">
+                
+              </div>
+             
+              <h2><br></h2>
+             
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g3.jpeg" class="img-responsive">
+                
+              </div>
+  
+              <h2><br></h2>
+              
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g4.jpeg" class="img-responsive">
+                
+              </div>
+             
+              <h2><br></h2>
+             
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g5.jpeg" class="img-responsive">
+                
+              </div>
+              
+              <h2><br></h2>
+             
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g6.jpeg" class="img-responsive">
+                
+              </div>
+              
+              <h2><br></h2>
+              
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g7.jpeg" class="img-responsive">
+
+              </div>
+              
+              <h2><br></h2>
+              
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g8.jpeg" class="img-responsive">
+                
+              </div>
+              
+              <h2><br></h2>
+              
+            </div>
+            <br>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g9.jpeg" class="img-responsive">
+               
+              </div>
+             
+              <h2><br></h2>
+             
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g10.jpeg" class="img-responsive">
+                
+              </div>
+             
+              <h2><br></h2>
+             </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g11.jpeg" class="img-responsive">
+               
+              </div>
+              
+              <h2><br></h2>
+             
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="{{url('public')}}/dist/img/g12.jpeg" class="img-responsive">
+               
+              </div>
+              
+              <h2><br></h2>
+          
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+ 
+</div>
+
+</section>
 
     <footer class="ftco-section ftco-section-2 bg-dark">
         <div class="col-md-12 text-center">

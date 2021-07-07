@@ -25,7 +25,7 @@
 	<input type="hidden" name="status" required="" value="lunas">
 	<input type="hidden" name="keterangan" required="" value="">
 
-	<div class="form-group row">
+	<!-- <div class="form-group row">
       <label for="" class="col-sm-2 col-form-label">Id Santri</label>
       <div class="input-group col-sm-10">
         <div class="input-group-prepend">
@@ -40,7 +40,18 @@
         	@endforeach
         </select>
       </div>          
-    </div>
+    </div> -->
+    <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Id Santri</label>
+        <div class="input-group col-sm-10">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-table"></i> 
+            </div>
+          </div>
+          <input type="text" name="id_santri" class="form-control bg-light" placeholder="Id Santri" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+        </div>          
+      </div>
     <div class="form-group row">
       <label for="" class="col-sm-2 col-form-label">Bulan</label>
       <div class="input-group col-sm-10">

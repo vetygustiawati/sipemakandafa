@@ -44,7 +44,18 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a href="{{url('/home')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-home mr-2"></i> Home</a></li>
             <li class="nav-item"><a href="{{url('/visimisi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Visi Misi</a></li>
-            <li class="nav-item"><a href="{{url('/infopondok')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-bell mr-2"></i> Informasi Pondok</a></li>
+            <li class="nav-item"><a href="{{url('/prestasi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Prestasi</a></li>
+            <div class="dropdown">
+  <button class=" dropdown-toggle" type="button" data-toggle="dropdown">Informasi Pondok
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="{{url('/sejarah')}}">Sejarah</a></li>
+    <li><a href="{{url('/infosb')}}">Santri Baru</a></li>
+    <li><a href="{{url('/kegponpes')}}">Majelis DAFA</a></li>
+    <li><a href="{{url('/foto')}}">Foto Pembangunan</a></li>
+    <li><a href="{{url('/galeri')}}">Galeri Pondok</a></li>
+  </ul>
+</div>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="https://www.instagram.com/ponpesdarulfadhilah" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i></a></li>

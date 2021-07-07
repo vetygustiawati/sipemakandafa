@@ -43,7 +43,7 @@
           </li>
   
           <li class="nav-item">
-            <a href="#" class="nav-link {{checkRouteActive('admin/santri/putra')}}{{checkRouteActive('admin/santri/putri')}}" style="background: #EDC7B7; color: black; !important">
+            <a href="#" class="nav-link {{checkRouteActive('admin/santri/putra')}}{{checkRouteActive('admin/santri/putra')}}" style="background: #EDC7B7; color: black; !important">
               <i class="nav-icon fas fa-user-graduate"></i>
               <i class="right fas fa-angle-left"></i>
               <p>

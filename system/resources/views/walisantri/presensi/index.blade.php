@@ -252,9 +252,9 @@
 								@endif
 							</td>
 							<td><!-- jul -->
-								@if($presensi->jul == 'hadir')
+								@if($presensi->juli == 'hadir')
 									<button class="btn btn-success"><i class="fa fa-check"></i></button>
-								@elseif($presensi->jul == '0')
+								@elseif($presensi->juli == '0')
 									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
 								@endif
 							</td>

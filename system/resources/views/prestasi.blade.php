@@ -44,7 +44,7 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a href="{{url('/home')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-home mr-2"></i> Home</a></li>
             <li class="nav-item"><a href="{{url('/visimisi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Visi Misi</a></li>
-             <li class="nav-item"><a href="{{url('/prestasi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Prestasi</a></li>
+            <li class="nav-item"><a href="{{url('/prestasi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Prestasi</a></li>
             <div class="dropdown">
   <button class=" dropdown-toggle" type="button" data-toggle="dropdown">Informasi Pondok
   <span class="caret"></span></button>
@@ -65,22 +65,33 @@
     </nav>
     <!-- END nav -->
 
-    <section class="hero-wrap js-fullheight img" style="background-image: url(public/web/images/ws1.jpg);">
+    <section class="hero-wrap js-fullheight img" style="background-image: url(public/web/images/ws2.jpg);">
       <div class="overlay"></div>
       <div class="container">
-        <div class="row description js-fullheight align-items-center justify-content-justify">
-          <div class="col-md-8 text-justify">
+        <div class="row description js-fullheight align-items-left justify-content-left">
+          <div class="col-md-8 text-left">
             <div class="text">
-              <h4 style="font-color: white;"><b>Visi Pondok Pesantren Darul Fadhilah Ketapang</b></h4>
-              <h4 class="mb-5">Memasyarakatkan Al-Qur’an dan Meng Al-Qur’ankan Masyarakat</h4>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+<h4><b>Prestasi Pondok Pesantren Darul Fadhilah baik dalam bidang agama maupun formal</b></h4>
+              <h4 class="mb-5"><p style="text-align: justify;">Pondok Pesantren Darul Fadhilah Ketapang mempunyai prestasi baik dalam bidang agama maupun formal, yaitu sebagai berikut:
+                                    <ol>
+                                      <li>Telah mencetak 8 santri penghafal Al-Qur’an</li>
+                                      <li>Telah memberikan beasiswa kepada 5 santri putra dan 1 santri putri di Universitas Al Azhar Cairo Mesir</li>
+                                      <li>Telah memberikan beasiswa kerja kepada 3 santri putra dan 1 santri putri ke negara Malaysia</li>
+                                      <li>Telah memberikan beasiswa magang kepada 14 santri putra di The Learning Farm, Cianjur</li>
+                                    </ol>
+                                  </p></h4>
+              <!-- <h3>Sejarah Pondok Pesantren Darul Fadhilah Ketapang</h3>
+              <h6 class="mb-5"><p style="text-align: justify;">
+              Pondok Pesantren Darul Fadhilah Ketapang mulai terbentuk pada tahun 2015 yang terletak di Jl. Pendidikan, Kauman, Benua Kayong, Kabupaten Ketapang, Kalimantan Barat. Sistem pendidikan yang diterapkan adalah sistem pendidikan yang fokus, berjenjang, terpadu, yaitu perpaduan antara pendidikan Diniyyah Pondok Pesantren (PONPES) dan pendidikan formal. Pondok Pesantren Darul Fadhilah sebagai salah satu tempat pendidikan islam, yang memiliki orientasi mencetak generasi muslim untuk menjadi insan yang paripurna dalam tindak, sikap, serta ucapan, dengan tetap mengutamakan penguasaan Al-Qur’an baik hafalan, pemahaman, serta pengamalan, yang merupakan literatur pokok bagi umat islam/muslim dengan tidak melupakan hadist-hadist dan cabang-cabang ilmu islam yang lain. 
+              Pada tahun 2015 Pondok Pesantren Darul Fadhilah memulai perjalanannya, saat itu jumlah santri putra hanya 28 orang dan santri putri hanya 11 orang dengan total keseluruhan 39 orang santri. Dari tahun pertama ini perjalanan Pondok Pesantren Darul Fadhilah hanyalah dibimbing oleh beberapa asatid dan asatidzah. Hingga pada tahun 2020 ini total santri putra ada 253 orang dan santri putri 203 orang, dan juga memiliki sekolah formal mulai dari PAUD, SD, SMP, SMA dan SMK. Kemudian dari pondoknya sendiri terdapat pilihan Hifdzhul Qur’an dan Taklim Kutub. Selain itu, terdapat 104 majelis yang tersebar dimana-mana dibawah naungan Darul Fadhilah yang terdiri dari majelis bapak-bapak, ibu-ibu, remaja hingga anak-anak.</p></h6> -->
+              
             </div>
-            <div class="text">
-              <h4><b>Misi Pondok Pesantren Darul Fadhilah Ketapang</b></h4>
-              <h4 class="mb-5"  style="text-align: justify;"><ol><li>Mencetak penghafal-penghafal Al-Qur’an yang berkeyakinan dan beramal Ahlussunah waljamaah.</li>
-              <li>Ikut serta dalam usaha mencerdaskan kehidupan bangsa sebagaimana tertuang dalam UUD 1945.</li>
-              <li>Mencetak generasi yang balance, yang mampu menggabungkan cita-cita akhirat dan cita-cita dunia.</li>
-              <li>Mencetak Dai-Dai Mukhlis, Amil, Tawadu’ yang didukung dengan skill-skill usaha.</li></ol></h4>
-            </div>
+            
           </div>
         </div>
       </div>

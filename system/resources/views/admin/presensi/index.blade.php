@@ -21,7 +21,7 @@
 	<input type="hidden" name="tgl_presensi" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')" value="<?php date_default_timezone_set('Asia/Pontianak'); echo date("y/m/d"); ?>">
 	<input type="hidden" name="keterangan" required="" value="">
 
-	<div class="form-group row">
+	<!-- <div class="form-group row">
       <label for="" class="col-sm-2 col-form-label">Id Santri</label>
       <div class="input-group col-sm-10">
         <div class="input-group-prepend">
@@ -36,7 +36,18 @@
         	@endforeach
         </select>
       </div>          
-    </div>
+    </div> -->
+    <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Id Santri</label>
+        <div class="input-group col-sm-10">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-table"></i> 
+            </div>
+          </div>
+          <input type="text" name="id_santri" class="form-control bg-light" placeholder="Id Santri" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
+        </div>          
+      </div>
     <div class="form-group row">
     </div>
 
@@ -149,9 +160,9 @@
 								@endif
 							</td>
 							<td><!-- jul -->
-								@if($presensi->jul == 'hadir')
+								@if($presensi->juli == 'hadir')
 									<button class="btn btn-success"><i class="fa fa-check"></i></button>
-								@elseif($presensi->jul == '0')
+								@elseif($presensi->juli == '0')
 									<button class="btn btn-danger"><i class="fa fa-times"></i></button>
 								@endif
 							</td>

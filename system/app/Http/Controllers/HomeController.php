@@ -65,8 +65,23 @@ class HomeController extends Controller{
 	function showVisimisi(){
 		return view('visimisi');
 	}
-	function showInfopondok(){
-		return view('infopondok');
+	function showSejarah(){
+		return view('sejarah');
+	}
+	function showPrestasi(){
+		return view('prestasi');
+	}
+	function showInfosb(){
+		return view('infosb');
+	}
+	function showKegponpes(){
+		return view('kegponpes');
+	}
+	function showFoto(){
+		return view('foto');
+	}
+	function showGaleri(){
+		return view('galeri');
 	}
 	
 }
