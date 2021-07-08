@@ -71,9 +71,6 @@ class HomeController extends Controller{
 	function showPrestasi(){
 		return view('prestasi');
 	}
-	function showInfosb(){
-		return view('infosb');
-	}
 	function showKegponpes(){
 		return view('kegponpes');
 	}

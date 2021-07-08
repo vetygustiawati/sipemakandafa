@@ -48,17 +48,17 @@
             <li class="nav-item"><a href="{{url('/home')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-home mr-2"></i> Home</a></li>
             <li class="nav-item"><a href="{{url('/visimisi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Visi Misi</a></li>
             <li class="nav-item"><a href="{{url('/prestasi')}}" class="nav-link icon d-flex align-items-center"><i class="fa fa-tasks mr-2"></i> Prestasi</a></li>
-            <div class="dropdown">
-  <button class=" dropdown-toggle" type="button" data-toggle="dropdown">Informasi Pondok
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="{{url('/sejarah')}}">Sejarah</a></li>
-    <li><a href="{{url('/infosb')}}">Santri Baru</a></li>
-    <li><a href="{{url('/kegponpes')}}">Majelis DAFA</a></li>
-    <li><a href="{{url('/foto')}}">Foto Pembangunan</a></li>
-    <li><a href="{{url('/galeri')}}">Galeri Pondok</a></li>
-  </ul>
-</div>
+            <button type="button" class="btn btn-sm btn-light" data-toggle="modal" data-target="#myModal"><i class="fas fa-bell"></i>Info Pendaftaran</button>
+           <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Informasi Pondok <i class="icofont-thin-down"></i></a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown05">
+            <li><a class="dropdown-item" href="{{url('/sejarah')}}">Sejarah</a></li>
+            <li><a class="dropdown-item" href="{{url('/kegponpes')}}">Majelis DAFA</a></li>
+            <li><a class="dropdown-item" href="{{url('/foto')}}">Foto Pembangunan</a></li>
+            <li><a class="dropdown-item" href="{{url('/galeri')}}">Galeri Pondok</a></li>
+          </ul>
+          </li>
+        
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="https://www.instagram.com/ponpesdarulfadhilah" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i></a></li>
@@ -66,6 +66,47 @@
         </div>
       </div>
     </nav>
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title">Informasi Pendaftaran</h4>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="{{url('public')}}/dist/img/gambar1.jpeg" class="d-block w-100" height="450" />
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+              <img src="{{url('public')}}/dist/img/gambar2.jpeg" class="d-block w-100" height="450" />
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="{{url('public')}}/dist/img/gambar2.jpeg" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="{{url('public')}}/dist/img/gambar2.jpeg" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
     <!-- END nav -->
 
   

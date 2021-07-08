@@ -19,7 +19,6 @@ Route::get('home', [HomeController::class, 'showHome']);
 Route::get('visimisi', [HomeController::class, 'showVisimisi']);
 Route::get('sejarah', [HomeController::class, 'showSejarah']);
 Route::get('prestasi', [HomeController::class, 'showPrestasi']);
-Route::get('infosb', [HomeController::class, 'showInfosb']);
 Route::get('kegponpes', [HomeController::class, 'showKegponpes']);
 Route::get('foto', [HomeController::class, 'showFoto']);
 Route::get('galeri', [HomeController::class, 'showGaleri']);
