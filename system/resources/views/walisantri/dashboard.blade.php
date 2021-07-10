@@ -28,7 +28,7 @@
           <div class="info-box-content">
             <span class="info-box-text">PENGUMUMAN MUSYAWARAH WALI SANTRI (<b>MWS</b>)</span>
             <span class="info-box-number">
-              {{ date('l, d M Y', strtotime($mws[0]->hari)) }}
+              {{ date('l, d F Y', strtotime($mws[0]->hari)) }}
               <br>
               <p>{{$mws[0]->ket}}</p>
             </span>
