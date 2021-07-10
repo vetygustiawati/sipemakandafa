@@ -19,7 +19,6 @@ Route::get('kegponpes', [HomeController::class, 'showKegponpes']);
 Route::get('foto', [HomeController::class, 'showFoto']);
 Route::get('galeri', [HomeController::class, 'showGaleri']);
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
