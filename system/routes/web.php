@@ -10,10 +10,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\MwsController;
 
-Route::get('/', function () {
-    return view('home');
-});
-
 Route::get('base', [HomeController::class, 'showBaseAdmin']);
 Route::get('home', [HomeController::class, 'showHome']);
 Route::get('visimisi', [HomeController::class, 'showVisimisi']);
@@ -22,6 +18,16 @@ Route::get('prestasi', [HomeController::class, 'showPrestasi']);
 Route::get('kegponpes', [HomeController::class, 'showKegponpes']);
 Route::get('foto', [HomeController::class, 'showFoto']);
 Route::get('galeri', [HomeController::class, 'showGaleri']);
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+
+Route::get('/', function () {
+    return view('home2');
+});
+
 
 
 Route::prefix('admin')->middleware('auth')->group(function() {
