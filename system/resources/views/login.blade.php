@@ -33,14 +33,14 @@
                  @include('admin.template.utils.notif')
                 @csrf
                 <div class="form-group ">
-                  <label for="username">Username</label>
+                  <label for="email">email</label>
                   <div class="input-group">
                           <div class="input-group-prepend">
                             <div class="input-group-text">
                               <i class="fa fa-user"></i>
                             </div>
                           </div>
-                          <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus placeholder="Username">
+                          <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus placeholder="Username">
                   <div class="invalid-feedback">
                     Maaf, anda belum memasukan Username
                   </div>

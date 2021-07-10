@@ -14,7 +14,7 @@ class AuthController extends Controller{
 		return view('login');
 	}
 	function loginProcess(User $user){
-		if(Auth::attempt(['username' => request('username'), 'password' => request('password')])) {
+		if(Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
 			if(Auth::user()->level== 'admin'){
 				return redirect('admin/dashboard')->with('success','Anda Berhasil Login');
 
