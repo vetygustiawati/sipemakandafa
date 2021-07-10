@@ -64,7 +64,7 @@
                   </div>
                 </div><br>
 
-
+                  <a href="{{url('password/reset')}}">Reset Password...</a>
                   <div class="form-group text-center">
                   <button onclick="login()" type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="3">
                     Login
