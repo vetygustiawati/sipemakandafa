@@ -25,10 +25,8 @@ class SantriController extends Controller{
 		$data['list_santri'] = DB::table('santri')->where('id',$id_santri)->get();
 
 		return view('walisantri.santri.index', $data);
-
 	}
 	function create(){
-		
 		return view('admin.santri.create');
 	}
 	function store(){

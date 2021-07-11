@@ -71,7 +71,9 @@ Route::prefix('admin')->middleware('auth')->group(function() {
 	//laporan
 	Route::get('laporanCari',[LaporanController::class,'cariAdmin']);
 	Route::get('laporan',[LaporanController::class,'indexAdmin']);
+	Route::get('laporanTahun',[LaporanController::class,'cariAdminTahun']);
 	Route::get('laporan/laporanBulanan', [LaporanController::class, 'laporanBulananAdmin']);
+	Route::get('laporan/laporanTahunan', [LaporanController::class, 'laporanTahunanAdmin']);
 			
 	// mws
 	Route::get('mws',[MwsController::class,'index']);
@@ -103,7 +105,9 @@ Route::prefix('pengasuh')->middleware('auth')->group(function() {
 	//laporan
 	Route::get('laporanCari',[LaporanController::class,'cariPengasuh']);
 	Route::get('laporan',[LaporanController::class,'indexPengasuh']);
+	Route::get('laporanTahun',[LaporanController::class,'cariPengasuhTahun']);
 	Route::get('laporan/laporanBulanan', [LaporanController::class, 'laporanBulananPengasuh']);
+	Route::get('laporan/laporanTahunan', [LaporanController::class, 'laporanTahunanPengasuh']);
 
 	Route::get('user', [UserController::class, 'indexPengasuh']);
     Route::get('user/{user}/edit', [UserController::class, 'editPengasuh']);

@@ -72,6 +72,31 @@ class LaporanController extends Controller
         // dd($data['laporan_presensi']);
         return view('admin.laporan.index',$data);
     }
+
+    public function cariAdminTahun()
+    {
+        $tahun = request()->tahun;
+        $data['tahun'] = $tahun;
+        $data['laporan_presensi'] = DB::table('presensi')
+        ->select('presensi.*','santri.id_santri','santri.nm_wsantri','santri.nama_santri')
+        ->join('santri','santri.id_santri','presensi.id_santri')
+        ->where('tgl_presensi','like', $tahun.'%')
+        ->get();
+        // dd($data['laporan_presensi']);
+        return view('admin.laporan.indexTahun',$data);
+    }
+    public function cariPengasuhTahun()
+    {
+        $tahun = request()->tahun;
+        $data['tahun'] = $tahun;
+        $data['laporan_presensi'] = DB::table('presensi')
+        ->select('presensi.*','santri.id_santri','santri.nm_wsantri','santri.nama_santri')
+        ->join('santri','santri.id_santri','presensi.id_santri')
+        ->where('tgl_presensi','like', $tahun.'%')
+        ->get();
+        // dd($data['laporan_presensi']);
+        return view('pengasuh.laporan.indexTahun',$data);
+    }    
     public function cariPengasuh()
     {
         
@@ -99,6 +124,26 @@ class LaporanController extends Controller
             ->groupBy ('id_santri')
             ->get();
         return view('admin.laporan.laporanBulanan', $data);
+    }
+    function laporanTahunanAdmin(){
+        $tahun = request()->tahun;
+        $data['laporan_presensi'] =  DB::table('presensi')
+            ->select('santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','status', 'tgl_presensi', 'bln')
+            ->join('santri', 'presensi.id_santri', '=', 'santri.id_santri')
+            ->where('tgl_presensi','like', $tahun.'%')
+            ->groupBy ('id_santri')
+            ->get();
+        return view('admin.laporan.laporanBulanan', $data);
+    }
+    function laporanTahunanPengasuh(){
+        $tahun = request()->tahun;
+        $data['laporan_presensi'] =  DB::table('presensi')
+            ->select('santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','status', 'tgl_presensi', 'bln')
+            ->join('santri', 'presensi.id_santri', '=', 'santri.id_santri')
+            ->where('tgl_presensi','like', $tahun.'%')
+            ->groupBy ('id_santri')
+            ->get();
+        return view('pengasuh.laporan.laporanBulanan', $data);
     }
     function laporanBulananPengasuh(){
         $tahun = request()->tahun;

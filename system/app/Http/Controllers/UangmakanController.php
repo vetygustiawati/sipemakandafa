@@ -7,7 +7,6 @@ use App\Models\User;
 
 class UangmakanController extends Controller{
 	function indexAdmin(){
-		
 		$data['list_uangmakan'] =  DB::table('uangmakan')
 	        ->select('uangmakan.id as idu','santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','santri.foto','tgl', 'status', 'keterangan','user.id_user','user.nama', 'user.username','nama_administrasi', 'nominal', 'uangmakan.id as iduangmakan',
 	        	DB::raw("sum(case when id_administrasi='01' THEN nominal else 0 end )as jan"),
@@ -24,7 +23,7 @@ class UangmakanController extends Controller{
 				DB::raw("sum(case WHEN id_administrasi='12' THEN nominal ELSE 0 end) as des"),
 				DB::raw("count(nominal) as acount")
 	        	)
-	    	->join ('santri', 'uangmakan.id_santri', '=', 'santri.id_santri')
+	    	->join ('santri', 'uangmakan.id_santri', '=', 'santri.id')
 	    	->join ( 'user', 'uangmakan.id_user', '=', 'user.id') 
 	    	->join ( 'administrasi', 'uangmakan.id_administrasi', '=', 'administrasi.id') 
 	    	->orderBy('nama_santri','asc')
@@ -37,6 +36,7 @@ class UangmakanController extends Controller{
 	function indexWalisantri(){
 		// $data['list_uangmakan'] = Uangmakan::all();
 		$id_santri = request()->user()->id_santri;
+		// dd($id_santri);
 		$data['list_uangmakan'] =  DB::table('uangmakan')
 	        ->select('uangmakan.id as idu','santri.id','santri.id_santri','santri.nama_santri', 'santri.nm_wsantri','santri.foto','tgl', 'status', 'keterangan','user.id_user','user.nama', 'user.username','nama_administrasi', 'nominal', 'uangmakan.id as iduangmakan',
 	        	DB::raw("sum(case when id_administrasi='01' THEN nominal else 0 end )as jan"),
@@ -53,12 +53,13 @@ class UangmakanController extends Controller{
 				DB::raw("sum(case WHEN id_administrasi='12' THEN nominal ELSE 0 end) as des"),
 				DB::raw("count(nominal) as acount")
 	        	)
-	        ->where('santri.id', '=', $id_santri)
-	    	->join ('santri', 'uangmakan.id_santri', '=', 'santri.id_santri')
+	        ->where('uangmakan.id_santri', '=', $id_santri)
+	    	->join ('santri', 'uangmakan.id_santri', '=', 'santri.id')
 	    	->join ( 'user', 'uangmakan.id_user', '=', 'user.id') 
 	    	->join ( 'administrasi', 'uangmakan.id_administrasi', '=', 'administrasi.id') 
 	    	->groupBy ('id_santri')
 	        ->get();
+			// dd($data['list_uangmakan']);
 
 		return view('walisantri.uangmakan.index', $data);
 	}
@@ -76,9 +77,10 @@ class UangmakanController extends Controller{
 		$uangmakan->tgl = request ('tgl');
 		$uangmakan->status = request ('status');
 		$uangmakan->keterangan = request ('keterangan');
+		// dd(request()->all());
 		$uangmakan->save();
 			
-			return redirect('admin/uangmakan')->with('success','Data Berhasil Disimpan');
+		return redirect('admin/uangmakan')->with('success','Data Berhasil Disimpan');
 		
 	}
 	function show(Uangmakan $uangmakan){

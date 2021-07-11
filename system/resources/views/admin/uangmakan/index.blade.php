@@ -25,7 +25,7 @@
 	<input type="hidden" name="status" required="" value="lunas">
 	<input type="hidden" name="keterangan" required="" value="">
 
-	<!-- <div class="form-group row">
+	<div class="form-group row">
       <label for="" class="col-sm-2 col-form-label">Id Santri</label>
       <div class="input-group col-sm-10">
         <div class="input-group-prepend">
@@ -36,12 +36,12 @@
         <select name="id_santri" class="form-control select2" required="">
         	<option>--Pilih Santri--</option>
         	@foreach($list_santri as $d)
-        	<option value="{{$d->id_santri}}">{{$d->id_santri}}-{{$d->nama_santri}}</option>
+        	<option value="{{$d->id}}">{{$d->id_santri}}-{{$d->nama_santri}}</option>
         	@endforeach
         </select>
       </div>          
-    </div> -->
-    <div class="form-group row">
+    </div>
+<!--     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Id Santri</label>
         <div class="input-group col-sm-10">
           <div class="input-group-prepend">
@@ -51,7 +51,7 @@
           </div>
           <input type="text" name="id_santri" class="form-control bg-light" placeholder="Id Santri" required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
         </div>          
-      </div>
+      </div> -->
     <div class="form-group row">
       <label for="" class="col-sm-2 col-form-label">Bulan</label>
       <div class="input-group col-sm-10">

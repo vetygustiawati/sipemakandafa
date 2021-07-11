@@ -6,7 +6,7 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header">
-					<div class="card-title">Filter</div>
+					<div class="card-title">Filter Bulan</div>
 					<div class="card-tools">
 						<button type="button" class="btn btn-tool" data-card-widget="collapse">
 							<i class="fa fa-minus"></i>
@@ -55,6 +55,40 @@
 		</div>
 	</div>
 </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title">Filter Tahun</div>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				
+				<div class="card-body">
+				<form action="{{url('admin/laporanTahun')}}" method="get">
+					<div class="col-sm-12">
+						<label class="col-sm-3 col-form-label">Tahun</label>
+						<div class="input-group mb-3">
+				               <div class="input-group-prepend">
+				               	<span class="input-group-text"><i class="fas fa-calendar"></i></span>
+				               </div>
+							<input type="text" name="tahun" id="" placeholder="Tahun" class="form-control">
+		               	</div>
+					</div>
+
+					<button type="input" class="btn btn-primary float-right">Cari</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
