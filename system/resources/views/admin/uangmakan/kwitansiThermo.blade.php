@@ -157,7 +157,7 @@ div.WordSection1
   <td width=117 colspan=2 valign=top style='width:87.7pt;border:none;
   border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$list_uangmakan->nama}}</span></p>
+  115%'><span style='line-height:115%;font-family:"Times New Roman","serif"'>{{$list_uangmakan->username}}</span></p>
   </td>
  </tr>
  <tr>

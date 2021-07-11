@@ -33,16 +33,16 @@
                  @include('admin.template.utils.notif')
                 @csrf
                 <div class="form-group ">
-                  <label for="email">email</label>
+                  <label for="email">Email</label>
                   <div class="input-group">
                           <div class="input-group-prepend">
                             <div class="input-group-text">
                               <i class="fa fa-user"></i>
                             </div>
                           </div>
-                          <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus placeholder="Username">
+                          <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus placeholder="Email">
                   <div class="invalid-feedback">
-                    Maaf, anda belum memasukan Username
+                    Maaf, anda belum memasukan Email
                   </div>
                 </div>
                 </div>
@@ -64,7 +64,7 @@
                   </div>
                 </div><br>
 
-                  <a href="{{url('password/reset')}}">Reset Password...</a>
+                  <a href="{{url('password/reset')}}">Forgot Password?</a>
                   <div class="form-group text-center">
                   <button onclick="login()" type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="3">
                     Login

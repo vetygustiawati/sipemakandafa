@@ -18,7 +18,7 @@
 						@csrf
 						@method("PUT")
        
-<div class="form-group row">
+<!-- <div class="form-group row">
         <label class="col-sm-2 col-form-label">Nama</label>
         <div class="col-sm-10">
           <div class="input-group">
@@ -27,8 +27,8 @@
               <i class="fa fa-table"></i> 
             </div>
           </div>
-          <!-- <input type="text" name="nama" class="form-control bg-light" placeholder="Nama"
-          required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')"> -->
+          <input type="text" name="nama" class="form-control bg-light" placeholder="Nama"
+          required="" oninvalid="this.setCustomValidity('Data Belum Lengkap')" oninput="setCustomValidity('')">
           <select name="id_santri" class="form-control select2">
             <option >--Pilih Santri--</option>
             @foreach ($santri as $d)
@@ -37,7 +37,7 @@
           </select>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Email</label>
         <div class="input-group col-sm-10">
